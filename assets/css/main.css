@@ -5,15 +5,14 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Palatino, "Palatino Linotype", "Book Antiqua", "Noto Serif", "DejaVu Serif";
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.5;
-  margin: 0;
+  margin: 1rem;
   min-height: 100vh;
 }
 
 body > * {
-  max-width: 768px;
-  padding: 1rem;
+  max-width: 40rem;
   width: 100%;
 }
 
