@@ -17,12 +17,12 @@ body > * {
 }
 
 header {
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #e0e0e0;
   margin-bottom: 1rem;
 }
 
 footer {
-  border-top: 1px solid #222;
+  border-top: 1px solid #e0e0e0;
   margin-top: 1rem;
 }
 
