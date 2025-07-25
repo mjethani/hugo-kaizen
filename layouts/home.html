@@ -1,4 +1,7 @@
 {{- define "main" }}
+  {{- with .Params.subtitle }}
+    <h2>{{ . }}</h2>
+  {{- end }}
 {{ .Content }}
   {{- range site.RegularPages }}
     <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
