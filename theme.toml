@@ -1,0 +1,10 @@
+name = "Super Basic"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "A super basic Hugo theme"
+homepage = "https://github.com/mjethani/hugo-super-basic"
+min_version = "0.148.0"
+
+[author]
+  name = "Manish Jethani"
+  homepage = "https://manishjethani.com"
