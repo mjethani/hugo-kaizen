@@ -1,19 +1,21 @@
 {{- define "main" }}
-  {{- with .Params.subtitle }}
-    <h1>{{ . }}</h1>
-  {{- end }}
+    <section>
 
 {{ .Content }}
 
+    </section>
+
   {{- range sort (where site.Sections "Section" "in" site.MainSections) "Weight" }}
-    <h2>{{ .Title }}</h2>
-    <ul>
+    <section>
+      <h2>{{ .Title }}</h2>
+      <ul>
     {{- $pages := where .Site.RegularPages "Section" .Section }}
     {{- $sectionSize := or .Site.Params.homeSectionSize 5 }}
     {{- $topPages := first $sectionSize $pages }}
     {{- range $topPages }}
-      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
     {{- end }}
-    </ul>
+      </ul>
+    </section>
   {{- end }}
 {{- end }}
