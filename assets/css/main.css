@@ -62,7 +62,9 @@ a {
 }
 
 .title {
+  color: color-mix(in srgb, var(--color) 40%, transparent);
   margin: 0 auto;
+  text-transform: uppercase;
 }
 
 .copyright {
