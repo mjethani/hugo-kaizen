@@ -66,7 +66,7 @@ a {
 }
 
 .copyright {
-  color: color-mix(in srgb, var(--color) 40%, transparent);
+  color: color-mix(in srgb, var(--color) 60%, transparent);
   font-size: 0.8em;
   text-align: center;
 }
