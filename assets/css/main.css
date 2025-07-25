@@ -66,20 +66,20 @@ a {
 }
 
 .copyright {
-  color: color-mix(in srgb, var(--color) 60%, transparent);
+  color: color-mix(in srgb, var(--color) 80%, transparent);
   font-size: 0.8em;
   text-align: center;
 }
 
 .article-title {
-  color: color-mix(in srgb, var(--color) 20%, transparent);
+  color: color-mix(in srgb, var(--color) 40%, transparent);
   font-size: 4em;
   line-height: 1.125;
   margin: 0.25em auto;
 }
 
 .article-date {
-  color: color-mix(in srgb, var(--color) 40%, transparent);
+  color: color-mix(in srgb, var(--color) 80%, transparent);
 }
 
 .highlight pre {
