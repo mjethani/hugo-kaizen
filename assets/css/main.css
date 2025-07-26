@@ -171,6 +171,7 @@ html[rtl] .menu nav ul > li::before {
 }
 
 .home-kind .menu {
+  display: none;
 }
 
 .home-kind main section:first-child h1 {
