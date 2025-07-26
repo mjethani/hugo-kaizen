@@ -99,7 +99,7 @@ main > article > header {
   font-family: ui-sans-serif, system-ui, sans-serif;
   gap: 1rem;
   list-style: none;
-  margin: 1rem 0;
+  margin: 1rem 0 2.058rem;
   padding: 0;
 }
 
@@ -140,7 +140,7 @@ html[rtl] .menu nav ul > li::before {
 
 .article-title {
   font-size: 3.33rem;
-  font-weight: 300;
+  margin-top: 0;
 }
 
 .article-date {
