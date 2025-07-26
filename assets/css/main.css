@@ -113,6 +113,12 @@ main > article > header {
 
 .menu nav ul > li::before {
   content: '/';
+  margin-right: 0.25em;
+}
+html[rtl] .menu nav ul > li::before {
+  content: '\\';
+  margin-left: 0.25em;
+  margin-right: 0;
 }
 
 .menu nav ul > li a {
