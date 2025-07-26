@@ -19,8 +19,71 @@ body {
   flex-direction: column;
   font-family: Palatino, "Palatino Linotype", "Book Antiqua", "Noto Serif", "DejaVu Serif";
   font-size: var(--font-size);
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 1em;
+}
+
+a {
+  color: var(--color);
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+h4, h5, h6 {
+  font-size: 1em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+ul, ol {
+  margin: 0 0 1em 1.5em;
+  padding: 0;
+}
+html[dir=rtl] ul, html[dir=rtl] ol {
+  margin: 0 1.5em 1em 0;
+}
+
+li + li {
+  margin-top: 0.25em;
+}
+
+blockquote {
+  border-left: 4px solid #ccc;
+  color: #555;
+  font-style: italic;
+  margin: 1.5em 0;
+  padding-left: 1em;
+}
+
+pre {
+  margin: 1.5em 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  margin: 1.5em auto;
+  max-width: 100%;
 }
 
 body > * {
@@ -40,11 +103,6 @@ main > article > header {
   margin: 1em auto 2em;
 }
 
-a {
-  color: var(--color);
-  text-decoration: underline;
-}
-
 .menu nav ul {
   display: flex;
   gap: 1em;
@@ -61,27 +119,15 @@ a {
   text-decoration: none;
 }
 
-.title {
-  color: color-mix(in srgb, var(--color) 40%, transparent);
-  margin: 0 auto;
-  text-transform: uppercase;
-}
-
 .copyright {
-  color: color-mix(in srgb, var(--color) 80%, transparent);
-  font-size: 0.8em;
+  font-size: 0.75em;
   text-align: center;
 }
 
 .article-title {
-  color: color-mix(in srgb, var(--color) 40%, transparent);
   font-size: 4em;
   line-height: 1.125;
-  margin: 0.25em auto;
-}
-
-.article-date {
-  color: color-mix(in srgb, var(--color) 80%, transparent);
+  margin: 0.5em auto 0.375em;
 }
 
 .highlight pre {
@@ -101,6 +147,8 @@ a {
 
 .home-kind main section > ul {
   list-style: none;
+  margin-left: 0;
+  margin-right: 0;
   padding-left: 0;
   padding-right: 0;
 }
