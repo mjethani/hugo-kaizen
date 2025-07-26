@@ -38,7 +38,8 @@ body > * {
 
 a {
   color: var(--color);
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -125,6 +126,7 @@ html[rtl] .menu nav ul > li::before {
 
 .menu nav ul > li a {
   text-decoration: none;
+  border-bottom: none;
 }
 
 .title {
@@ -163,11 +165,36 @@ html[rtl] .menu nav ul > li::before {
   margin: 0 0 1rem 0;
 }
 
-.highlight pre {
+pre {
   border-radius: 0.486rem;
-  font-size: 0.786rem;
-  padding: 1rem;
+  padding: 0.618rem;
   text-wrap-mode: wrap;
+}
+
+:not(pre) > code {
+  border-radius: 0.3rem;
+  padding: 0.382rem;
+}
+
+pre, :not(pre) > code {
+  background: #272822;
+  color: #f8f8f2;
+  font-size: 0.786rem;
+}
+
+a code {
+  color: #66d9ef;
+}
+
+@media (prefers-color-scheme: dark) {
+  pre, :not(pre) > code {
+    background: #282828;
+    color: #ebdbb2;
+  }
+
+  a code {
+    color: #fabd2f;
+  }
 }
 
 .home-kind .menu {
