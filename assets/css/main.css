@@ -90,8 +90,18 @@ img {
   max-width: 100%;
 }
 
+body > header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.058rem;
+}
+
 main > article > header {
   margin-bottom: 2.058rem;
+}
+
+.menu {
+  order: -1;
 }
 
 .menu nav ul {
@@ -99,7 +109,7 @@ main > article > header {
   font-family: ui-sans-serif, system-ui, sans-serif;
   gap: 1rem;
   list-style: none;
-  margin: 1rem 0 2.058rem;
+  margin: 1rem 0 0;
   padding: 0;
 }
 
@@ -121,8 +131,10 @@ html[rtl] .menu nav ul > li::before {
   font-size: 1.272rem;
   font-weight: 300;
   letter-spacing: 0.236rem;
-  margin: 2.058rem auto 2.058rem;
+  line-height: 1;
+  margin: 2.058rem auto 0;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .title::first-letter {
@@ -140,6 +152,8 @@ html[rtl] .menu nav ul > li::before {
 
 .article-title {
   font-size: 3.33rem;
+  font-weight: 300;
+  line-height: 1;
   margin-top: 0;
 }
 
@@ -157,7 +171,6 @@ html[rtl] .menu nav ul > li::before {
 }
 
 .home-kind .menu {
-  display: none;
 }
 
 .home-kind main section:first-child h1 {
