@@ -1,8 +1,8 @@
 :root {
   --background: #e8e6e3;
   --color: #1c1b1a;
-  --font-size: 20px;
-  --max-width: 600px;
+  --font-size: 16px;
+  --max-width: 30rem;
 }
 
 @media (prefers-color-scheme: dark) {
