@@ -145,9 +145,8 @@ html[rtl] .menu nav ul > li::before {
 }
 
 .copyright {
-  color: #808080;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-  font-size: 0.786rem;
+  font-size: 0.618rem;
   margin-top: 1rem;
   text-align: center;
 }
