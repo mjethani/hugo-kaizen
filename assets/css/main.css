@@ -1,7 +1,7 @@
 :root {
   --background: #e8e6e3;
   --color: #1c1b1a;
-  --font-size: 16px;
+  --font-size: 1rem;
   --max-width: 30rem;
 }
 
@@ -17,13 +17,13 @@
 }
 
 :root {
-  background: var(--background);
-  color: var(--color);
   font-size: var(--font-size);
 }
 
 body {
   align-items: center;
+  background: var(--background);
+  color: var(--color);
   display: flex;
   flex-direction: column;
   font-family: Palatino, "Palatino Linotype", "Book Antiqua", "Noto Serif", "DejaVu Serif";
@@ -39,7 +39,7 @@ body > * {
 a {
   color: var(--color);
   text-decoration: none;
-  border-bottom: 1px dotted var(--color);
+  border-bottom: 0.0625rem dotted var(--color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -72,7 +72,7 @@ ul, ol {
   margin: 0 0 1rem 1.618rem;
   padding: 0;
 }
-html[dir=rtl] ul, html[dir=rtl] ol {
+[dir=rtl] ul, [dir=rtl] ol {
   margin: 0 1.618rem 1rem 0;
 }
 
@@ -118,7 +118,7 @@ main > article > header {
   content: '/';
   margin-right: 0.236rem;
 }
-html[rtl] .menu nav ul > li::before {
+[dir=rtl] .menu nav ul > li::before {
   content: '\\';
   margin-left: 0.236rem;
   margin-right: 0;
@@ -167,7 +167,8 @@ html[rtl] .menu nav ul > li::before {
 pre {
   border-radius: 0.486rem;
   padding: 0.618rem;
-  text-wrap-mode: wrap;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 :not(pre) > code {
