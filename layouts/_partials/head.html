@@ -4,5 +4,8 @@
 <meta name="description" content="{{- (or .Description .Summary) | htmlUnescape | plainify | replaceRE "\\s+" " " | replaceRE "^ +| +$" "" -}}">
 
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+
+<link rel="canonical" href="{{ .Permalink }}">
+
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
