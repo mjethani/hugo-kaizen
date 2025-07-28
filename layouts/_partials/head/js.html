@@ -4,7 +4,11 @@
   }}
   {{- with . | js.Build $opts }}
     {{- with . | minify | fingerprint }}
+      {{- if site.Params.unsafeInlineJS }}
+<script>{{ .Content | safeJS }}</script>
+      {{- else }}
 <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+      {{- end }}
     {{- end }}
   {{- end }}
 {{- end }}
