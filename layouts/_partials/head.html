@@ -5,7 +5,9 @@
 
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 
+{{- if not (strings.HasSuffix .RelPermalink "/404.html") }}
 <link rel="canonical" href="{{ .Permalink }}">
+{{- end }}
 
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
