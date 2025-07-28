@@ -9,3 +9,7 @@
 
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
+
+{{- if templates.Exists "partials/nonstdmeta.html" }}
+{{ partial "nonstdmeta.html" . }}
+{{- end }}
