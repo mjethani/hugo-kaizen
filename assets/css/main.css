@@ -140,13 +140,13 @@ main > article > header {
 }
 
 .title::first-letter {
-  color: mediumvioletred;
+  color: palevioletred;
   font-size: 2.618rem;
 }
 
 @media (prefers-color-scheme: dark) {
   .title::first-letter {
-    color: crimson;
+    color: indianred;
   }
 }
 
