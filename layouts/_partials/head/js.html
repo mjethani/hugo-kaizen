@@ -1,14 +1,9 @@
 {{- with resources.Get "js/main.js" }}
-  {{- $opts := dict
-    "sourceMap" (cond hugo.IsDevelopment "external" "")
-  }}
-  {{- with . | js.Build $opts }}
-    {{- with . | minify | fingerprint }}
-      {{- if site.Params.unsafeInlineJS }}
+  {{- with . | minify | fingerprint }}
+    {{- if site.Params.unsafeInlineJS }}
 <script>{{ .Content | safeJS }}</script>
-      {{- else }}
+    {{- else }}
 <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
-      {{- end }}
     {{- end }}
   {{- end }}
 {{- end }}
