@@ -146,7 +146,7 @@ main > article > header {
 
 @media (prefers-color-scheme: dark) {
   .title::first-letter {
-    color: indianred;
+    color: crimson;
   }
 }
 
