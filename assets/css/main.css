@@ -245,9 +245,12 @@ a:has(> code:only-child) {
 }
 
 html:not(.home-kind) .title {
-  display: none;
+  font-size: 0.786rem;
 }
 
+html:not(.home-kind) .title::first-letter {
+  font-size: 1.618em;
+}
 
 @media (prefers-color-scheme: light) {
 /* Generated using: hugo gen chromastyles --style=monokai */
