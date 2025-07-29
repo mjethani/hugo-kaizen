@@ -1,5 +1,5 @@
 :root {
-  --background: #e8e6e3;
+  --background-color: #e8e6e3;
   --color: #1c1b1a;
   --font-size: 1rem;
   --max-width: 30rem;
@@ -7,7 +7,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1c1b1a;
+    --background-color: #1c1b1a;
     --color: #e8e6e3;
   }
 }
@@ -22,7 +22,7 @@
 
 body {
   align-items: center;
-  background: var(--background);
+  background-color: var(--background-color);
   color: var(--color);
   display: flex;
   flex-direction: column;
@@ -202,7 +202,7 @@ main > section:first-child .section-title {
 }
 
 .article-tags ul > li a {
-  background: color-mix(in srgb, var(--color) 9%, transparent);
+  background-color: color-mix(in srgb, var(--color) 9%, transparent);
   border-radius: 0.382rem;
   border: none;
   color: inherit;
@@ -235,7 +235,7 @@ pre {
 }
 
 pre, :not(pre) > code {
-  background: #272822;
+  background-color: #272822;
   color: #f8f8f2;
   font-size: 0.786rem;
 }
@@ -250,7 +250,7 @@ a:has(> code:only-child) {
 
 @media (prefers-color-scheme: dark) {
   pre, :not(pre) > code {
-    background: #282828;
+    background-color: #282828;
     color: #ebdbb2;
   }
 
