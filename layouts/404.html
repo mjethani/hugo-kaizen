@@ -1,0 +1,10 @@
+{{- define "main" }}
+  <section>
+  {{- with site.GetPage "_404.md" }}
+    <h2 class="section-title">{{ .Title }}</h2>
+
+{{ .Content }}
+
+  {{- end }}
+  </section>
+{{- end }}

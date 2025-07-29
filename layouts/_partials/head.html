@@ -1,12 +1,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 
+{{- if not (strings.HasSuffix .RelPermalink "/404.html") }}
 <meta name="description" content="{{- (or .Description .Summary) | htmlUnescape | plainify | replaceRE "\\s+" " " | replaceRE "^ +| +$" "" -}}">
 
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 
-{{- if not (strings.HasSuffix .RelPermalink "/404.html") }}
 <link rel="canonical" href="{{ .Permalink }}">
+{{- else }}
+  {{- with site.GetPage "_404.md" }}
+<title>{{ printf "%s | %s" .Title site.Title }}</title>
+  {{- end }}
 {{- end }}
 
 {{ partialCached "head/css.html" . }}
