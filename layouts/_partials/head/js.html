@@ -1,4 +1,4 @@
-{{- with resources.Get "js/main.js" }}
+{{- with resources.Get "js/extensions.js" }}
   {{- with . | minify | fingerprint }}
     {{- if site.Params.unsafeInlineJS }}
 <script>{{ .Content | safeJS }}</script>

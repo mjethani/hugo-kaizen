@@ -19,3 +19,13 @@
     {{- end }}
   {{- end }}
 {{- end }}
+
+{{- with resources.Get "css/extensions.css" }}
+  {{- with . | minify | fingerprint }}
+    {{- if site.Params.unsafeInlineCSS }}
+<style>{{ .Content | safeCSS }}</style>
+    {{- else }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}
