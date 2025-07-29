@@ -16,6 +16,6 @@
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
 
-{{- if templates.Exists "partials/nonstdmeta.html" }}
-{{ partial "nonstdmeta.html" . }}
+{{- if templates.Exists "_partials/head/extensions.html" }}
+{{ partial "head/extensions.html" . }}
 {{- end }}
