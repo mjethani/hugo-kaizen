@@ -164,17 +164,6 @@ main > section:first-child .section-title {
   width: 100%;
 }
 
-.title::first-letter {
-  color: palevioletred;
-  font-size: 2.618rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .title::first-letter {
-    color: crimson;
-  }
-}
-
 .copyright {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   font-size: 0.618rem;
@@ -291,8 +280,4 @@ main > section > ul > li::before {
 
 html:not(.home-kind) .title {
   font-size: 0.786rem;
-}
-
-html:not(.home-kind) .title::first-letter {
-  font-size: 1.618em;
 }
