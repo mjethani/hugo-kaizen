@@ -223,8 +223,8 @@ a:has(> code:only-child) {
   display: none;
 }
 
-.home-kind main section > ul,
-.section-kind main section > ul {
+main > section > ul,
+[dir=rtl] main > section > ul {
   list-style: none;
   margin-left: 0;
   margin-right: 0;
@@ -232,13 +232,11 @@ a:has(> code:only-child) {
   padding-right: 0;
 }
 
-.home-kind main section > ul > li::before,
-.section-kind main section > ul > li::before {
+main > section > ul > li::before {
   content: '→';
   margin-right: 0.486rem;
 }
-.home-kind[dir=rtl] main section > ul > li::before,
-.section-kind[dir=rtl] main section > ul > li::before {
+[dir=rtl] main > section > ul > li::before {
   content: '←';
   margin-left: 0.486rem;
   margin-right: 0;
