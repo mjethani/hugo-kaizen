@@ -223,39 +223,19 @@ main > section:first-child .section-title {
 }
 
 pre {
+  background-color: #272822;
   border-radius: 0.486rem;
+  color: #f8f8f2;
+  font-size: 0.786rem;
   padding: 0.618rem;
   white-space: pre-wrap;
   word-break: break-word;
 }
 
-:not(pre) > code {
-  border-radius: 0.3rem;
-  padding: 0.382rem;
-}
-
-pre, :not(pre) > code {
-  background-color: #272822;
-  color: #f8f8f2;
-  font-size: 0.786rem;
-}
-
-a code {
-  color: #66d9ef;
-}
-
-a:has(> code:only-child) {
-  border-bottom: none;
-}
-
 @media (prefers-color-scheme: dark) {
-  pre, :not(pre) > code {
+  pre {
     background-color: #282828;
     color: #ebdbb2;
-  }
-
-  a code {
-    color: #fabd2f;
   }
 }
 
