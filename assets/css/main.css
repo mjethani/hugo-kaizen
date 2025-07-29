@@ -39,7 +39,7 @@ body > * {
 a {
   color: var(--color);
   text-decoration: none;
-  border-bottom: 0.0625rem dotted var(--color);
+  border-bottom: 0.071rem dotted var(--color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -89,6 +89,20 @@ img {
   height: auto;
   margin: 1.618rem auto;
   max-width: 100%;
+}
+
+blockquote {
+  border-left: 0.115rem solid color-mix(in srgb, var(--color) 23.6%, transparent);
+  color: color-mix(in srgb, var(--color) 61.8%, transparent);
+  margin: 1.618rem auto;
+  padding: 0 0 0 1rem;
+}
+[dir=rtl] blockquote {
+  border-left: none;
+  border-right: 0.115rem solid color-mix(in srgb, var(--color) 23.6%, transparent);
+  color: color-mix(in srgb, var(--color) 61.8%, transparent);
+  margin: 1.618rem auto;
+  padding: 0 1rem 0 0;
 }
 
 body > header {
