@@ -13,7 +13,7 @@
     {{- $sectionSize := or .Site.Params.homeSectionSize 5 }}
     {{- $topPages := first $sectionSize $pages }}
     {{- range $topPages }}
-        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
     {{- end }}
       </ul>
     </section>
