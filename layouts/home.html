@@ -10,7 +10,7 @@
       <h2 class="section-title">{{ .Title }}</h2>
       <ul>
     {{- $pages := where .Site.RegularPages "Section" .Section }}
-    {{- $sectionSize := or .Site.Params.homeSectionSize 5 }}
+    {{- $sectionSize := or .Site.Params.homeSectionSize 3 }}
     {{- $topPages := first $sectionSize $pages }}
     {{- range $topPages }}
         <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
