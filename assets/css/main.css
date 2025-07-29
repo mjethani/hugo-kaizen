@@ -191,6 +191,10 @@ a code {
   color: #66d9ef;
 }
 
+a:has(> code:only-child) {
+  border-bottom: none;
+}
+
 @media (prefers-color-scheme: dark) {
   pre, :not(pre) > code {
     background: #282828;
