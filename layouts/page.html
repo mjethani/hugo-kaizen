@@ -3,9 +3,11 @@
     <header>
       <h1 class="article-title">{{ .Title }}</h1>
 
-  {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{- $dateHuman := .Date | time.Format ":date_long" }}
+  {{- if isset .Params "date" }}
+    {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+    {{- $dateHuman := .Date | time.Format ":date_long" }}
       <time class="article-date" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+  {{- end }}
     </header>
 
 {{ .Content }}
