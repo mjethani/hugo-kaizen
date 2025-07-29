@@ -101,6 +101,11 @@ main > article > header {
   margin-bottom: 2.058rem;
 }
 
+main > section:first-child h1,
+main > section:first-child .section-title {
+  margin-top: 0;
+}
+
 .menu {
   order: -1;
 }
@@ -125,7 +130,6 @@ main > article > header {
 }
 
 .menu nav ul > li a {
-  text-decoration: none;
   border-bottom: none;
 }
 
@@ -164,9 +168,18 @@ main > article > header {
 }
 
 .article-date {
-  font-size: 0.786rem;
   display: block;
-  margin: 0 0 1rem 0;
+  font-size: 0.786rem;
+  margin: 0 0 1rem;
+}
+
+.more-link {
+  line-height: 1;
+  margin: 0 0 1rem;
+}
+
+.more-link a {
+  border-bottom: none;
 }
 
 pre {
@@ -210,11 +223,8 @@ a:has(> code:only-child) {
   display: none;
 }
 
-.home-kind main section:first-child h1 {
-  margin-top: 0;
-}
-
-.home-kind main section > ul {
+.home-kind main section > ul,
+.section-kind main section > ul {
   list-style: none;
   margin-left: 0;
   margin-right: 0;
@@ -222,11 +232,13 @@ a:has(> code:only-child) {
   padding-right: 0;
 }
 
-.home-kind main section > ul > li::before {
+.home-kind main section > ul > li::before,
+.section-kind main section > ul > li::before {
   content: '→';
   margin-right: 0.486rem;
 }
-.home-kind[dir=rtl] main section > ul > li::before {
+.home-kind[dir=rtl] main section > ul > li::before,
+.section-kind[dir=rtl] main section > ul > li::before {
   content: '←';
   margin-left: 0.486rem;
   margin-right: 0;

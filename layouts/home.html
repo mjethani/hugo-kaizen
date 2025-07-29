@@ -7,7 +7,7 @@
 
   {{- range sort (where site.Sections "Section" "in" site.MainSections) "Weight" }}
     <section>
-      <h2>{{ .Title }}</h2>
+      <h2 class="section-title">{{ .Title }}</h2>
       <ul>
     {{- $pages := where .Site.RegularPages "Section" .Section }}
     {{- $sectionSize := or .Site.Params.homeSectionSize 5 }}
@@ -16,6 +16,9 @@
         <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
     {{- end }}
       </ul>
+    {{- if gt (len $pages) $sectionSize }}
+      <div class="more-link"><a href="{{ .RelPermalink }}">&middot; &middot;&middot;</a></div>
+    {{- end }}
     </section>
   {{- end }}
 {{- end }}
