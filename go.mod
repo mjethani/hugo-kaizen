@@ -1,3 +1,3 @@
-module github.com/mjethani/hugo-super-basic
+module github.com/mjethani/hugo-kaizen
 
 go 1.24.4

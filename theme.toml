@@ -1,8 +1,8 @@
-name = "Super Basic"
+name = "Kaizen"
 license = "MIT"
 licenselink = "https://opensource.org/licenses/MIT"
-description = "A super basic Hugo theme"
-homepage = "https://github.com/mjethani/hugo-super-basic"
+description = "A minimalistic Hugo theme that keeps getting better"
+homepage = "https://github.com/mjethani/hugo-kaizen"
 min_version = "0.148.0"
 
 [author]
