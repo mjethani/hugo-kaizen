@@ -93,15 +93,13 @@ img {
 
 blockquote {
   border-left: 0.115rem solid color-mix(in srgb, var(--color) 23.6%, transparent);
-  color: color-mix(in srgb, var(--color) 61.8%, transparent);
+  color: color-mix(in srgb, var(--color) 78.6%, transparent);
   margin: 1.618rem auto;
   padding: 0 0 0 1rem;
 }
 [dir=rtl] blockquote {
   border-left: none;
   border-right: 0.115rem solid color-mix(in srgb, var(--color) 23.6%, transparent);
-  color: color-mix(in srgb, var(--color) 61.8%, transparent);
-  margin: 1.618rem auto;
   padding: 0 1rem 0 0;
 }
 
