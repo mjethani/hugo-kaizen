@@ -137,21 +137,27 @@ main > section:first-child .section-title {
   padding: 0;
 }
 
-.menu nav ul > li::before {
+.menu nav ul > li:has(> a[href^='/'])::before {
   content: '/';
   margin-right: 0.236rem;
 }
-[dir=rtl] .menu nav ul > li::before {
+[dir=rtl] .menu nav ul > li:has(> a[href^='/'])::before {
   content: '\\';
+  margin-left: 0.236rem;
+  margin-right: 0;
+}
+
+.menu nav ul > li:not(:has(> a[href^='/']))::before {
+  content: '•';
+  margin-right: 0.236rem;
+}
+[dir=rtl] .menu nav ul > li:not(:has(> a[href^='/']))::before {
   margin-left: 0.236rem;
   margin-right: 0;
 }
 
 .menu nav ul > li a {
   border-bottom: none;
-}
-
-.menu nav ul > li a.active::after {
 }
 
 .title {
