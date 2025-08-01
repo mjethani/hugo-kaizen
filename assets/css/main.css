@@ -261,6 +261,10 @@ pre {
   }
 }
 
+:not(pre) > code {
+  font-size: 0.786rem;
+}
+
 main > section > ul,
 [dir=rtl] main > section > ul {
   list-style: none;
