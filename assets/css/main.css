@@ -91,6 +91,22 @@ img {
   max-width: 100%;
 }
 
+figure {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.618rem;
+  margin: 1.618rem auto;
+}
+
+figure > * {
+  margin: 0;
+}
+
+figure > figcaption {
+  font-size: 0.786rem;
+}
+
 blockquote {
   border-left: 0.115rem solid color-mix(in srgb, var(--color) 23.6%, transparent);
   color: color-mix(in srgb, var(--color) 78.6%, transparent);
