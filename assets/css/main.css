@@ -5,15 +5,15 @@
   --max-width: 30rem;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #1c1b1a;
     --color: #e8e6e3;
   }
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
 }
 
 :root {
