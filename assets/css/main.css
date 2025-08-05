@@ -149,6 +149,8 @@ main > section:first-child .section-title {
 }
 
 .menu nav ul > li {
+  display: inline-flex;
+  line-height: 1;
   margin: 0;
   padding: 0;
 }
@@ -219,6 +221,8 @@ main > section:first-child .section-title {
 }
 
 .article-tags ul > li {
+  display: inline-flex;
+  line-height: 1;
   margin: 0;
   padding: 0;
 }
