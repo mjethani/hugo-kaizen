@@ -124,6 +124,24 @@ blockquote {
   padding: 0 1rem 0 0;
 }
 
+blockquote > footer {
+  font-size: 0.786rem;
+}
+
+blockquote > footer > cite:only-child {
+  display: flex;
+  font-style: normal;
+}
+
+blockquote > footer > cite:only-child::before {
+  content: '―';
+  margin-right: 0.236rem;
+}
+[dir=rtl] blockquote > footer > cite:only-child::before {
+  margin-left: 0.236rem;
+  margin-right: 0;
+}
+
 body > header {
   display: flex;
   flex-direction: column;
