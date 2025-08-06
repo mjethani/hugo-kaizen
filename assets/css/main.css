@@ -147,7 +147,7 @@ main > section:first-child .section-title {
   display: flex;
   font-family: ui-sans-serif, system-ui, sans-serif;
   font-weight: 200;
-  font-size: 0.618em;
+  font-size: 0.618rem;
   gap: 1rem;
   list-style: none;
   margin: 1rem 0 0;
