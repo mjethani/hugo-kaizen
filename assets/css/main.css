@@ -27,7 +27,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Palatino, "Palatino Linotype", "Book Antiqua", "Noto Serif", "DejaVu Serif", serif;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.618;
   margin: 0 1.272rem;
 }
@@ -164,7 +164,7 @@ main > section:first-child .section-title {
 .menu nav ul {
   display: flex;
   font-family: ui-sans-serif, system-ui, sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 0.618rem;
   gap: 1rem;
   list-style: none;
@@ -204,7 +204,7 @@ main > section:first-child .section-title {
 
 .title {
   font-size: 1.272rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.236rem;
   line-height: 1;
   margin: 2.058rem auto 0;
@@ -215,21 +215,21 @@ main > section:first-child .section-title {
 .copyright {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   font-size: 0.618rem;
-  font-weight: 200;
+  font-weight: 300;
   margin-top: 1rem;
   text-align: center;
 }
 
 .article-title {
   font-size: 2.618rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 0;
 }
 
 .article-date {
   display: block;
   font-size: 0.786rem;
-  font-weight: 200;
+  font-weight: 300;
   margin: 0 0 1rem;
 }
 
