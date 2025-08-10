@@ -86,7 +86,25 @@ li + li {
 }
 
 pre {
+  background-color: #272822;
+  border-radius: 0.486rem;
+  color: #f8f8f2;
+  font-size: 0.786rem;
   margin: 1.618rem auto;
+  padding: 0.618rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (prefers-color-scheme: dark) {
+  pre {
+    background-color: #282828;
+    color: #ebdbb2;
+  }
+}
+
+:not(pre) > code {
+  font-size: 0.786rem;
 }
 
 img {
@@ -340,27 +358,6 @@ main > section:first-child .section-title {
 
 .more-link a {
   border-bottom: none;
-}
-
-pre {
-  background-color: #272822;
-  border-radius: 0.486rem;
-  color: #f8f8f2;
-  font-size: 0.786rem;
-  padding: 0.618rem;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-@media (prefers-color-scheme: dark) {
-  pre {
-    background-color: #282828;
-    color: #ebdbb2;
-  }
-}
-
-:not(pre) > code {
-  font-size: 0.786rem;
 }
 
 main > section > ul,
