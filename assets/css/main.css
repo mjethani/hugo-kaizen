@@ -77,19 +77,16 @@
   }
 
   ul, ol {
-    margin: 0 0 1rem 1.618rem;
+    margin: 0 0 1rem;
+    margin-inline-start: 1.618rem;
     padding: 0;
-  }
-  [dir=rtl] ul, [dir=rtl] ol {
-    margin: 0 1.618rem 1rem 0;
   }
 
   li + li {
     margin-top: 0.382rem;
   }
 
-  main > section > ul,
-  [dir=rtl] main > section > ul {
+  main > section > ul {
     list-style: none;
     margin-left: 0;
     margin-right: 0;
@@ -99,12 +96,10 @@
 
   main > section > ul > li::before {
     content: '→';
-    margin-right: 0.486rem;
+    margin-inline-end: 0.486rem;
   }
   [dir=rtl] main > section > ul > li::before {
     content: '←';
-    margin-left: 0.486rem;
-    margin-right: 0;
   }
 
   pre {
@@ -152,15 +147,11 @@
   }
 
   blockquote {
-    border-left: 0.115rem solid color-mix(in srgb, var(--color) 23.6%, transparent);
+    border-inline-start: 0.115rem solid color-mix(in srgb, var(--color) 23.6%, transparent);
     color: color-mix(in srgb, var(--color) 78.6%, transparent);
     margin: 1.618rem auto;
-    padding: 0 0 0 1rem;
-  }
-  [dir=rtl] blockquote {
-    border-left: none;
-    border-right: 0.115rem solid color-mix(in srgb, var(--color) 23.6%, transparent);
-    padding: 0 1rem 0 0;
+    padding: 0;
+    padding-inline-start: 1rem;
   }
 
   blockquote > footer {
@@ -174,11 +165,7 @@
 
   blockquote > footer > cite:only-child::before {
     content: '―';
-    margin-right: 0.236rem;
-  }
-  [dir=rtl] blockquote > footer > cite:only-child::before {
-    margin-left: 0.236rem;
-    margin-right: 0;
+    margin-inline-end: 0.236rem;
   }
 
   table {
@@ -197,10 +184,7 @@
 
   thead th {
     background-color: color-mix(in srgb, var(--color) 14.6%, transparent);
-    text-align: left;
-  }
-  [dir=rtl] thead th {
-    text-align: right;
+    text-align: start;
   }
 
   th, td {
@@ -223,10 +207,7 @@
   }
 
   th[scope=row] {
-    text-align: left;
-  }
-  [dir=rtl] th[scope=row] {
-    text-align: right;
+    text-align: start;
   }
 
   td > :first-child, th > :first-child {
@@ -321,21 +302,15 @@
 
   .menu nav ul > li:has(> a[href^='/'])::before {
     content: '/';
-    margin-right: 0.236rem;
+    margin-inline-end: 0.236rem;
   }
   [dir=rtl] .menu nav ul > li:has(> a[href^='/'])::before {
     content: '\\';
-    margin-left: 0.236rem;
-    margin-right: 0;
   }
 
   .menu nav ul > li:not(:has(> a[href^='/']))::before {
     content: '•';
-    margin-right: 0.236rem;
-  }
-  [dir=rtl] .menu nav ul > li:not(:has(> a[href^='/']))::before {
-    margin-left: 0.236rem;
-    margin-right: 0;
+    margin-inline-end: 0.236rem;
   }
 
   .menu nav ul > li a {
@@ -400,10 +375,7 @@
 
 @layer utilities {
   .num {
-    text-align: right;
-  }
-  [dir=rtl] .num {
-    text-align: left;
+    text-align: start;
   }
 
   .nowrap {
