@@ -1,6 +1,6 @@
 /* Copyright (c) 2025 Manish Jethani */
 
-@layer tokens, base, typography, layout, components, utilities;
+@layer tokens, base, typography, layout, components, utilities, theme;
 
 @layer tokens {
   :root {
@@ -10,13 +10,6 @@
     --font-size: 1rem;
     --font-weight: 400;
     --max-width: 30rem;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background-color: #1c1b1a;
-      --color: #e8e6e3;
-    }
   }
 }
 
@@ -88,38 +81,13 @@
     margin-top: 0.382rem;
   }
 
-  main > section > ul {
-    list-style: none;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  main > section > ul > li::before {
-    content: '→';
-    margin-inline-end: 0.486rem;
-  }
-  [dir=rtl] main > section > ul > li::before {
-    content: '←';
-  }
-
   pre {
-    background-color: #272822;
     border-radius: 0.486rem;
-    color: #f8f8f2;
     font-size: 0.786rem;
     margin: 1.618rem auto;
     padding: 0.618rem;
     white-space: pre-wrap;
     word-break: break-word;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    pre {
-      background-color: #282828;
-      color: #ebdbb2;
-    }
   }
 
   :not(pre) > code {
@@ -264,8 +232,7 @@
 
 @layer components {
   .copyright {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
-    font-size: 0.618rem;
+    font-size: 0.786rem;
     font-weight: 300;
     text-align: center;
   }
@@ -286,9 +253,8 @@
 
   .menu nav ul {
     display: flex;
-    font-family: ui-sans-serif, system-ui, sans-serif;
     font-weight: 300;
-    font-size: 0.618rem;
+    font-size: 0.786rem;
     gap: 1rem;
     list-style: none;
     margin: 0;
@@ -300,23 +266,6 @@
     line-height: 1;
     margin: 0;
     padding: 0;
-  }
-
-  .menu nav ul > li:has(> a[href^='/'])::before {
-    content: '/';
-    margin-inline-end: 0.236rem;
-  }
-  [dir=rtl] .menu nav ul > li:has(> a[href^='/'])::before {
-    content: '\\';
-  }
-
-  .menu nav ul > li:not(:has(> a[href^='/']))::before {
-    content: '•';
-    margin-inline-end: 0.236rem;
-  }
-
-  .menu nav ul > li a {
-    border-bottom: none;
   }
 
   .more-link {
@@ -362,14 +311,6 @@
     padding: 0;
   }
 
-  .article-tags ul > li a {
-    background-color: color-mix(in srgb, var(--color) 9%, transparent);
-    border-bottom: none;
-    border-radius: 0.382rem;
-    color: inherit;
-    padding: 0.382rem;
-  }
-
   .article-tags ul > li a::before {
     content: '#';
   }
@@ -382,5 +323,74 @@
 
   .nowrap {
     white-space: nowrap;
+  }
+}
+
+@layer theme {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #1c1b1a;
+      --color: #e8e6e3;
+    }
+  }
+
+  pre {
+    background-color: #272822;
+    color: #f8f8f2;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    pre {
+      background-color: #282828;
+      color: #ebdbb2;
+    }
+  }
+
+  main > section > ul {
+    list-style: none;
+    margin-inline-start: 0;
+  }
+
+  main > section > ul > li::before {
+    content: '→';
+    margin-inline-end: 0.486rem;
+  }
+  [dir=rtl] main > section > ul > li::before {
+    content: '←';
+  }
+
+  .copyright {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+    font-size: 0.618rem;
+  }
+
+  .menu nav ul {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.618rem;
+  }
+
+  .menu nav ul > li:has(> a[href^='/'])::before {
+    content: '/';
+    margin-inline-end: 0.236rem;
+  }
+  [dir=rtl] .menu nav ul > li:has(> a[href^='/'])::before {
+    content: '\\';
+  }
+
+  .menu nav ul > li:not(:has(> a[href^='/']))::before {
+    content: '•';
+    margin-inline-end: 0.236rem;
+  }
+
+  .menu nav ul > li a {
+    border-bottom: none;
+  }
+
+  .article-tags ul > li a {
+    background-color: color-mix(in srgb, var(--color) 9%, transparent);
+    border-bottom: none;
+    border-radius: 0.382rem;
+    color: inherit;
+    padding: 0.382rem;
   }
 }
