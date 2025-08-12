@@ -37,8 +37,9 @@
 
   a {
     color: var(--color);
-    border-bottom: 0.071rem dotted var(--color);
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 0.236em;
   }
 
   strong {
@@ -320,7 +321,7 @@
   }
 
   .more-link a {
-    border-bottom: none;
+    text-decoration: none;
   }
 
   .article-title {
