@@ -154,7 +154,7 @@
   table {
     border-collapse: collapse;
     font-variant-numeric: tabular-nums;
-    margin: 1.618rem auto;
+    margin: 1.618rem 0;
     width: 100%;
   }
 
@@ -200,10 +200,6 @@
   td > :last-child, th > :last-child  {
     margin-bottom: 0;
   }
-
-  main > section:first-child > *:first-child {
-    margin-top: 0;
-  }
 }
 
 @layer layout {
@@ -226,20 +222,29 @@
     margin-top: 1rem;
   }
 
+  body > footer {
+    margin-top: 1.618rem;
+    margin-bottom: 1rem;
+  }
+
   .menu {
     order: -1;
   }
 
-  body > footer {
-    margin-top: 1rem;
+  main > section:first-child {
+    margin-trim: block-start;
+  }
+
+  main > section:last-child {
+    margin-trim: block-end;
+  }
+
+  main > article {
+    margin-trim: block;
   }
 
   main > article > header {
     margin-bottom: 2.058rem;
-  }
-
-  main > article > footer {
-    margin-top: 1rem;
   }
 }
 
@@ -247,6 +252,7 @@
   .copyright {
     font-size: 0.786rem;
     font-weight: 300;
+    margin: 0;
     text-align: center;
   }
 
@@ -326,7 +332,7 @@
     flex-wrap: wrap;
     gap: 0.618rem 1rem;
     list-style: none;
-    margin: 1.618rem 0 1rem;
+    margin: 1.618rem 0 0;
     padding: 0;
   }
 
