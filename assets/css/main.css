@@ -231,41 +231,28 @@
     order: -1;
   }
 
-  main > section:first-child {
+  main > :first-child {
     margin-trim: block-start;
   }
-  @supports not (margin-trim: block-start) {
-    main > section:first-child > :first-child,
-    main > section:first-child > :first-child > :first-child,
-    main > section:first-child > :first-child > :first-child > :first-child {
-      margin-block-start: 0;
-    }
-  }
 
-  main > section:last-child {
+  main > :last-child {
     margin-trim: block-end;
   }
-  @supports not (margin-trim: block-end) {
-    main > section:last-child > :last-child,
-    main > section:last-child > :last-child > :last-child,
-    main > section:last-child > :last-child > :last-child > :last-child {
-      margin-block-end: 0;
-    }
-  }
 
-  main > article {
+  main > :only-child {
     margin-trim: block;
   }
+
   @supports not (margin-trim: block) {
-    main > article > :first-child,
-    main > article > :first-child > :first-child,
-    main > article > :first-child > :first-child > :first-child {
+    main > :first-child > :first-child,
+    main > :first-child > :first-child > :first-child,
+    main > :first-child > :first-child > :first-child > :first-child {
       margin-block-start: 0;
     }
 
-    main > article > :last-child,
-    main > article > :last-child > :last-child,
-    main > article > :last-child > :last-child > :last-child {
+    main > :last-child > :last-child,
+    main > :last-child > :last-child > :last-child,
+    main > :last-child > :last-child > :last-child > :last-child {
       margin-block-end: 0;
     }
   }
