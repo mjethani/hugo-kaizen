@@ -190,7 +190,6 @@
 
     th {
       font-weight: 600;
-      white-space: nowrap;
     }
 
     tbody tr:nth-child(odd) {
