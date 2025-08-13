@@ -164,9 +164,9 @@
     table {
       border-collapse: collapse;
       font-variant-numeric: tabular-nums;
+      inline-size: 100%;
       margin: 0;
       margin-block: 1.618rem;
-      inline-size: 100%;
     }
 
     caption {
@@ -223,8 +223,8 @@
     }
 
     body > * {
-      max-inline-size: var(--max-inline-size);
       inline-size: 100%;
+      max-inline-size: var(--max-inline-size);
     }
 
     body > header {
@@ -236,8 +236,8 @@
     }
 
     body > footer {
-      margin-block-start: 1.618rem;
       margin-block-end: 1rem;
+      margin-block-start: 1.618rem;
     }
 
     .menu {
@@ -286,11 +286,11 @@
     .title {
       font-size: 1.272rem;
       font-weight: 500;
+      inline-size: 100%;
       letter-spacing: 0.236rem;
       line-height: 1;
       margin: 0;
       text-transform: uppercase;
-      inline-size: 100%;
     }
 
     html:not(.home-kind) .title {
