@@ -9,9 +9,11 @@
       <time class="article-date" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
   {{- end }}
     </header>
+    <div class="article-content">
 
 {{ .Content }}
 
+    </div>
     <footer>
       <div class="article-tags">
 {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}

@@ -351,6 +351,24 @@
       margin-block-end: 1rem;
     }
 
+    .article-content {
+      margin-trim: block;
+    }
+
+    @supports not (margin-trim: block) {
+      .article-content > :first-child,
+      .article-content > :first-child > :first-child,
+      .article-content > :first-child > :first-child > :first-child {
+        margin-block-start: 0;
+      }
+
+      .article-content > :last-child,
+      .article-content > :last-child > :last-child,
+      .article-content > :last-child > :last-child > :last-child {
+        margin-block-end: 0;
+      }
+    }
+
     .article-tags > div > div {
       display: none;
     }
