@@ -8,7 +8,7 @@
       --font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', 'Noto Serif', 'DejaVu Serif', serif;
       --font-size: 1rem;
       --font-weight: 400;
-      --max-width: 30rem;
+      --max-inline-size: 30rem;
       --writing-mode: horizontal-tb;
     }
   }
@@ -50,7 +50,9 @@
     h1, h2, h3, h4, h5, h6 {
       font-weight: 600;
       line-height: 1.272;
-      margin: 1.618rem 0 1rem;
+      margin: 0;
+      margin-block-end: 1rem;
+      margin-block-start: 1.618rem;
     }
 
     h1 {
@@ -70,17 +72,19 @@
     }
 
     p {
-      margin: 0 0 1rem;
+      margin: 0;
+      margin-block-end: 1rem;
     }
 
     ul, ol {
-      margin: 0 0 1rem;
+      margin: 0;
+      margin-block-end: 1rem;
       margin-inline-start: 1.618rem;
       padding: 0;
     }
 
     li + li {
-      margin-top: 0.382rem;
+      margin-block-start: 0.382rem;
     }
 
     main > section > ul {
@@ -99,7 +103,8 @@
     pre {
       border-radius: 0.486rem;
       font-size: 0.786rem;
-      margin: 1.618rem auto;
+      margin: auto;
+      margin-block: 1.618rem;
       padding: 0.618rem;
       white-space: pre-wrap;
       word-break: break-word;
@@ -111,16 +116,18 @@
 
     img {
       display: block;
-      height: auto;
-      margin: 1.618rem auto;
-      max-width: 100%;
+      block-size: auto;
+      margin: auto;
+      margin-block: 1.618rem;
+      max-inline-size: 100%;
     }
 
     figure {
       display: flex;
       flex-direction: column;
       gap: 0.618rem;
-      margin: 1.618rem auto;
+      margin: auto;
+      margin-block: 1.618rem;
     }
 
     figure > * {
@@ -134,7 +141,8 @@
     blockquote {
       border-inline-start: 0.115rem solid color-mix(in srgb, var(--color) 23.6%, transparent);
       color: color-mix(in srgb, var(--color) 78.6%, transparent);
-      margin: 1.618rem auto;
+      margin: auto;
+      margin-block: 1.618rem;
       padding: 0;
       padding-inline-start: 1rem;
     }
@@ -156,15 +164,16 @@
     table {
       border-collapse: collapse;
       font-variant-numeric: tabular-nums;
-      margin: 1.618rem 0;
-      width: 100%;
+      margin: 0;
+      margin-block: 1.618rem;
+      inline-size: 100%;
     }
 
     caption {
-      caption-side: bottom;
+      caption-side: block-end;
       color: color-mix(in srgb, var(--color) 61.8%, transparent);
       font-size: 0.786rem;
-      padding-top: 0.486rem;
+      padding-block-start: 0.486rem;
     }
 
     thead th {
@@ -173,8 +182,9 @@
     }
 
     th, td {
-      border-bottom: 0.071rem solid color-mix(in srgb, var(--color) 18.6%, transparent);
-      padding: 0.486rem 0.618rem;
+      border-block-end: 0.071rem solid color-mix(in srgb, var(--color) 18.6%, transparent);
+      padding-block: 0.486rem;
+      padding-inline: 0.618rem;
       vertical-align: top;
     }
 
@@ -196,11 +206,11 @@
     }
 
     td > :first-child, th > :first-child {
-      margin-top: 0;
+      margin-block-start: 0;
     }
 
     td > :last-child, th > :last-child  {
-      margin-bottom: 0;
+      margin-block-end: 0;
     }
   }
 
@@ -209,25 +219,26 @@
       align-items: center;
       display: flex;
       flex-direction: column;
-      margin: 0 1.272rem;
+      margin: 0;
+      margin-inline: 1.272rem;
     }
 
     body > * {
-      max-width: var(--max-width);
-      width: 100%;
+      max-inline-size: var(--max-inline-size);
+      inline-size: 100%;
     }
 
     body > header {
       display: flex;
       flex-direction: column;
       gap: 2.058rem;
-      margin-bottom: 2.058rem;
-      margin-top: 1rem;
+      margin-block-end: 2.058rem;
+      margin-block-start: 1rem;
     }
 
     body > footer {
-      margin-top: 1.618rem;
-      margin-bottom: 1rem;
+      margin-block-start: 1.618rem;
+      margin-block-end: 1rem;
     }
 
     .menu {
@@ -261,7 +272,7 @@
     }
 
     main > article > header {
-      margin-bottom: 2.058rem;
+      margin-block-end: 2.058rem;
     }
   }
 
@@ -280,7 +291,7 @@
       line-height: 1;
       margin: 0;
       text-transform: uppercase;
-      width: 100%;
+      inline-size: 100%;
     }
 
     html:not(.home-kind) .title {
@@ -319,7 +330,8 @@
 
     .more-link {
       line-height: 1;
-      margin: 0 0 1rem;
+      margin: 0;
+      margin-block-end: 1rem;
     }
 
     .more-link a {
@@ -329,14 +341,15 @@
     .article-title {
       font-size: 2.618rem;
       font-weight: 500;
-      margin-top: 0;
+      margin-block-start: 0;
     }
 
     .article-date {
       display: block;
       font-size: 0.786rem;
       font-weight: 300;
-      margin: 0 0 1rem;
+      margin: 0;
+      margin-block-end: 1rem;
     }
 
     .article-tags > div > div {
@@ -349,7 +362,8 @@
       flex-wrap: wrap;
       gap: 0.618rem 1rem;
       list-style: none;
-      margin: 1.618rem 0 0;
+      margin: 0;
+      margin-block-start: 1.618rem;
       padding: 0;
     }
 
