@@ -271,7 +271,9 @@
     }
 
     main > article > header {
-      margin-block-end: 2.058rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
   }
 
@@ -340,7 +342,7 @@
     .article-title {
       font-size: 2.618rem;
       font-weight: 500;
-      margin-block-start: 0;
+      margin: 0;
     }
 
     .article-date {
@@ -348,11 +350,12 @@
       font-size: 0.786rem;
       font-weight: 300;
       margin: 0;
-      margin-block-end: 1rem;
     }
 
     .article-content {
       margin-trim: block;
+      margin-block-start: 2.058rem;
+      margin-block-end: 1.618rem;
     }
 
     @supports not (margin-trim: block) {
@@ -380,7 +383,6 @@
       gap: 0.618rem 1rem;
       list-style: none;
       margin: 0;
-      margin-block-start: 1.618rem;
       padding: 0;
     }
 
