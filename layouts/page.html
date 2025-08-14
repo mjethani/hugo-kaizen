@@ -20,4 +20,7 @@
       </div>
     </footer>
   </article>
+
+{{ partial "related.html" (dict "page" . "limit" 3) }}
+
 {{- end }}

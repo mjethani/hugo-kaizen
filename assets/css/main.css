@@ -396,6 +396,10 @@
     .article-tags ul > li a::before {
       content: '#';
     }
+
+    .related {
+      margin-block-start: 2.058rem;
+    }
   }
 
   @layer utilities {

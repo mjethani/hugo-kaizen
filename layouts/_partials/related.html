@@ -1,0 +1,26 @@
+{{- /*
+Renders a list of related pages.
+
+@context {page} page The current page.
+@context {limit} limit (optional) The maximum number of related pages to list. Defaults to 5.
+
+@example: {{ partial "related.html" (dict "page" . "limit" 5) }}
+*/}}
+
+{{- $page := .page }}
+
+{{- $limit := 5 }}
+{{- if isset . "limit" }}
+  {{- $limit = .limit }}
+{{- end }}
+
+{{- with site.RegularPages.Related $page | first $limit }}
+  <section class="related">
+    <h3 class="section-title">{{- i18n "related" -}}</h3>
+    <ul>
+  {{- range . }}
+      <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+  {{- end }}
+    </ul>
+  </section>
+{{- end }}
