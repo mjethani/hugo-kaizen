@@ -93,12 +93,11 @@
       margin-inline-start: 0;
     }
 
-    main > section > ul > li::before {
-      content: '→';
-      margin-inline-end: 0.486rem;
+    main > section > ul > li {
+      list-style-type: '→  ';
     }
-    [dir=rtl] main > section > ul > li::before {
-      content: '←';
+    [dir=rtl] main > section > ul > li {
+      list-style-type: '  ←';
     }
 
     pre {
@@ -302,32 +301,35 @@
 
     .menu nav ul {
       display: flex;
+      flex-wrap: wrap;
       font-weight: 300;
       font-size: 0.786rem;
-      gap: 1rem;
+      gap: 1.618rem;
       list-style: none;
       margin: 0;
       padding: 0;
     }
 
     .menu nav ul > li {
-      display: inline-flex;
       line-height: 1;
       margin: 0;
       padding: 0;
     }
 
     .menu nav ul > li:has(> a[href^='/'])::before {
-      content: '/';
-      margin-inline-end: 0.236rem;
+      content: '⟨ ';
     }
-    [dir=rtl] .menu nav ul > li:has(> a[href^='/'])::before {
-      content: '\\';
+
+    .menu nav ul > li:has(> a[href^='/'])::after {
+      content: ' ⟩';
     }
 
     .menu nav ul > li:not(:has(> a[href^='/']))::before {
-      content: '•';
-      margin-inline-end: 0.236rem;
+      content: '⟪ ';
+    }
+
+    .menu nav ul > li:not(:has(> a[href^='/']))::after {
+      content: ' ⟫';
     }
 
     .more-link {
@@ -402,9 +404,11 @@
       margin-block-start: 2.058rem;
     }
 
-    .related > ul > li::before {
-      content: '≅';
-      margin-inline-end: 0.486rem;
+    .related > ul > li {
+      list-style-type: '≅  ';
+    }
+    [dir=rtl] .related > ul > li {
+      list-style-type: '  ≅';
     }
   }
 
