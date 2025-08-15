@@ -87,7 +87,8 @@
       margin-block-start: 0.382rem;
     }
 
-    main > section > ul {
+    main > section > ul,
+    main > aside > ul {
       list-style: none;
       margin-inline-start: 0;
     }
@@ -399,6 +400,11 @@
 
     .related {
       margin-block-start: 2.058rem;
+    }
+
+    .related > ul > li::before {
+      content: '≅';
+      margin-inline-end: 0.486rem;
     }
   }
 

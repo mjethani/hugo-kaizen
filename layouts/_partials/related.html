@@ -15,12 +15,12 @@ Renders a list of related pages.
 {{- end }}
 
 {{- with site.RegularPages.Related $page | first $limit }}
-  <section class="related">
+  <aside class="related">
     <h3 class="section-title">{{- i18n "related" -}}</h3>
     <ul>
   {{- range . }}
       <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
   {{- end }}
     </ul>
-  </section>
+  </aside>
 {{- end }}
