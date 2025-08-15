@@ -17,7 +17,7 @@
     {{- end }}
       </ul>
     {{- if gt (len $pages) $sectionSize }}
-      <div class="more-link"><a href="{{ .RelPermalink }}">&middot; &middot;&middot;</a></div>
+      <p class="more-link"><a href="{{ .RelPermalink }}">{{- i18n "more" -}}</a></p>
     {{- end }}
     </section>
   {{- end }}
