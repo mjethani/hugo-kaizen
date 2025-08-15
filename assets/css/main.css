@@ -93,10 +93,10 @@
       margin-inline-start: 0;
     }
 
-    main > section > ul > li {
+    main > section > ul > li:dir(ltr) {
       list-style-type: '→  ';
     }
-    [dir=rtl] main > section > ul > li {
+    main > section > ul > li:dir(rtl) {
       list-style-type: '  ←';
     }
 
@@ -404,10 +404,10 @@
       margin-block-start: 2.058rem;
     }
 
-    .related > ul > li {
+    .related > ul > li:dir(ltr) {
       list-style-type: '≅  ';
     }
-    [dir=rtl] .related > ul > li {
+    .related > ul > li:dir(rtl) {
       list-style-type: '  ≅';
     }
   }
