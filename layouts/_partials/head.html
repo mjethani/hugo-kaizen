@@ -1,19 +1,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 
-{{- if not (strings.HasSuffix .RelPermalink "/404.html") }}
+{{- if eq .Kind "404" }}
+  {{- with site.GetPage "_404.md" }}
+<title>{{ printf "%s | %s" .Title site.Title }}</title>
+  {{- end }}
+
+{{- else }}
   {{- with .Params.robots }}
 <meta name="robots" content="{{ . }}">
   {{- end }}
+
 <meta name="description" content="{{- (or .Description .Summary) | htmlUnescape | plainify | replaceRE "\\s+" " " | replaceRE "^ +| +$" "" | truncate 150 -}}">
 
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 
 <link rel="canonical" href="{{ .Permalink }}">
-{{- else }}
-  {{- with site.GetPage "_404.md" }}
-<title>{{ printf "%s | %s" .Title site.Title }}</title>
-  {{- end }}
 {{- end }}
 
 {{ partialCached "head/css.html" . }}
