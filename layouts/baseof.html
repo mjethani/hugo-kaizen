@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" class="{{ .Kind }}-kind">
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" class="{{ .Kind }}-kind{{ if .Layout }} {{ .Layout }}-layout{{ end }}">
 <head>
   {{ partial "head.html" . }}
 </head>
