@@ -2,6 +2,9 @@
 <meta name="viewport" content="width=device-width">
 
 {{- if not (strings.HasSuffix .RelPermalink "/404.html") }}
+  {{- with .Params.robots }}
+<meta name="robots" content="{{ . }}">
+  {{- end }}
 <meta name="description" content="{{- (or .Description .Summary) | htmlUnescape | plainify | replaceRE "\\s+" " " | replaceRE "^ +| +$" "" | truncate 150 -}}">
 
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
