@@ -237,6 +237,9 @@
     }
 
     body > footer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.618rem;
       margin-block-end: 1rem;
       margin-block-start: 1.618rem;
     }
@@ -279,11 +282,15 @@
   }
 
   @layer components {
-    .copyright {
+    .copyright, .powered-by {
       font-size: 0.786rem;
       font-weight: 300;
       margin: 0;
       text-align: center;
+    }
+
+    .powered-by a {
+      font-weight: 600;
     }
 
     .title {

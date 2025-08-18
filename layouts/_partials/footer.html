@@ -1,1 +1,5 @@
-<p class="copyright">{{ site.Copyright }}</p>
+{{- with site.Copyright }}
+<p class="copyright">{{ . }}</p>
+{{- end }}
+
+<p class="powered-by">{{- i18n "powered_by" (dict "Kaizen" (printf `<a href="https://github.com/mjethani/hugo-kaizen" target="_blank">Kaizen</a>`)) | safeHTML -}}</p>

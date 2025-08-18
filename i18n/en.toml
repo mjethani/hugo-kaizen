@@ -3,3 +3,6 @@ other = 'Related'
 
 [more]
 other = 'More…'
+
+[powered_by]
+other = 'Powered by {{ .Kaizen }}'
