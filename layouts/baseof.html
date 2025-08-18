@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" class="{{ .Kind }}-kind{{ if .Layout }} {{ .Layout }}-layout{{ end }}">
 <head>
-  {{ partial "head.html" . }}
+{{ partial "head.html" . }}
 </head>
 <body>
   <header>
@@ -13,5 +13,8 @@
   <footer>
 {{ partial "footer.html" . }}
   </footer>
+{{- if templates.Exists "_partials/body/extensions.html" }}
+{{ partial "body/extensions.html" . }}
+{{- end }}
 </body>
 </html>
