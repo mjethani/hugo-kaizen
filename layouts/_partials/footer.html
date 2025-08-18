@@ -2,4 +2,4 @@
 <p class="copyright">{{ . }}</p>
 {{- end }}
 
-<p class="powered-by">{{- i18n "powered_by" (dict "Kaizen" (printf `<a href="https://github.com/mjethani/hugo-kaizen" target="_blank">Kaizen</a>`)) | safeHTML -}}</p>
+<p class="powered-by">{{- i18n "powered_by" (dict "Kaizen" "__KAIZEN__") | htmlEscape | replaceRE "\\b__KAIZEN__\\b" `<a href="https://github.com/mjethani/hugo-kaizen" target="_blank">Kaizen</a>` | safeHTML -}}</p>
