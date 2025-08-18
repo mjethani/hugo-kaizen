@@ -1,10 +1,10 @@
-{{- range site.Params.robots.rules }}
+{{ range site.Params.robots.rules -}}
 user-agent: {{ .userAgent }}
-  {{- range .allow }}
+{{ range .allow -}}
 allow: {{ . }}
-  {{- end }}
-  {{- range .disallow }}
+{{ end -}}
+{{ range .disallow -}}
 disallow: {{ . }}
-  {{- end }}
-{{- end }}
+{{ end -}}
+{{ end -}}
 sitemap: {{ "sitemap.xml" | absURL }}
