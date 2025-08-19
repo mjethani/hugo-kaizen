@@ -302,10 +302,28 @@
       font-size: 1.272rem;
       font-weight: 500;
       inline-size: 100%;
-      letter-spacing: 0.236rem;
       line-height: 1;
       margin: 0;
       text-transform: uppercase;
+    }
+
+    /* Latin */
+    .title:lang(en), .title:lang(es), .title:lang(pt),
+    .title:lang(fr), .title:lang(de), .title:lang(id),
+    .title:lang(it), .title:lang(pl), .title:lang(nl),
+    .title:lang(ro), .title:lang(vi), .title:lang(tr),
+    .title:lang(sw), .title:lang(hu), .title:lang(cs),
+    .title:lang(sk), .title:lang(sr), .title:lang(hr),
+    .title:lang(fi), .title:lang(no), .title:lang(da),
+    .title:lang(sv), .title:lang(af), .title:lang(ms),
+    .title:lang(lb), .title:lang(et), .title:lang(sl),
+    .title:lang(is), .title:lang(mt), .title:lang(gd),
+    .title:lang(lt), .title:lang(ga), .title:lang(bs),
+    .title:lang(zu), .title:lang(xh), .title:lang(st),
+    .title:lang(nso), .title:lang(rw), .title:lang(tl),
+    .title:lang(ceb), .title:lang(jv), .title:lang(hmn),
+    .title:lang(mg), .title:lang(mn) {
+      letter-spacing: 0.236rem;
     }
 
     html:not(.home-kind) .title {
