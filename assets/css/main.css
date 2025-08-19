@@ -373,6 +373,10 @@
       }
     }
 
+    .highlight {
+      direction: ltr;
+    }
+
     .article-tags > div > div {
       display: none;
     }
