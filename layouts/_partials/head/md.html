@@ -1,0 +1,12 @@
+{{- if site.Params.includeMarkdownSource }}
+  {{- with .RawContent }}
+    {{- $dir := path.Dir $.RelPermalink | strings.TrimSuffix "/" }}
+    {{- $baseName := "index" }}
+    {{- if not (strings.HasSuffix $.RelPermalink "/") }}
+      {{- $baseName = path.BaseName (path.Base $.RelPermalink) }}
+    {{- end }}
+    {{- $targetPath := printf "%s/%s.md" $dir $baseName }}
+    {{- $resource := resources.FromString $targetPath . }}
+<script type="text/markdown" src="{{ $resource.RelPermalink }}" integrity="{{ ($resource | fingerprint).Data.Integrity }}" crossorigin="anonymous"></script>
+  {{- end }}
+{{- end }}
