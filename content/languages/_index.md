@@ -1,5 +1,5 @@
 +++
-title = 'A → 文'
+title = 'A/文'
 +++
 
 {{< languages >}}
