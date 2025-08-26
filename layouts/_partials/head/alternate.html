@@ -2,8 +2,4 @@
 <link rel="alternate" href="{{ .Permalink }}" hreflang="{{ .Lang }}">
 {{- end }}
 
-{{- $xDefault := site.BaseURL }}
-{{- with site.Params.xDefault }}
-  {{- $xDefault = . | absURL }}
-{{- end }}
-<link rel="alternate" href="{{ $xDefault }}" hreflang="x-default">
+<link rel="alternate" href="{{ (site.Params.xDefault | default "/languages/") | absURL }}" hreflang="x-default">
