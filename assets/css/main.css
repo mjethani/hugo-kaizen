@@ -46,8 +46,12 @@
     a {
       color: var(--color);
       text-decoration: underline;
-      text-decoration-style: dotted;
-      text-underline-offset: 0.236em;
+      text-decoration-style: solid;
+      text-underline-offset: 0.382em;
+    }
+
+    a.active {
+      text-decoration-style: double;
     }
 
     strong {
