@@ -6,3 +6,18 @@ other = 'More…'
 
 [powered_by]
 other = 'Powered by {{ .Kaizen }}.'
+
+[no_js_error]
+other = 'Sorry, this feature requires JavaScript.'
+
+[search_index_load_error]
+other = "Oops! There was an issue loading the search index. Your search may not work. Try refreshing the page. If it still doesn't work, you might have to look for things the old-fashioned way."
+
+[search_input_placeholder]
+other = 'What are you looking for?'
+
+[search_input_label]
+other = 'Search'
+
+[results_for_query]
+other = 'Results for __QUERY__'

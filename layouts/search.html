@@ -1,0 +1,28 @@
+{{- define "main" }}
+  <section>
+    <h2 class="section-title">{{ .Title }}</h2>
+
+{{ .Content }}
+
+    <noscript>
+      <div class="no-js"><p class="error">{{- i18n "no_js_error" -}}</p></div>
+    </noscript>
+
+    <form id="search-form" role="search" onsubmit="return false" style="display: none !important">
+      <label id="search-label">
+        <svg id="search-icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="10" r="7" stroke="currentColor" stroke-width="2" fill="none"/>
+          <line x1="17" y1="16" x2="22" y2="21" stroke="currentColor" stroke-width="2"/>
+        </svg>
+
+        <input type="search" id="search-input" placeholder="{{- i18n "search_input_placeholder" -}}" aria-label="{{- i18n "search_input_label" -}}">
+      </label>
+    </form>
+
+    <div id="search-results" aria-live="polite"></div>
+  </section>
+
+  <script>
+{{ partial "search.js" . | safeJS }}
+  </script>
+{{- end }}

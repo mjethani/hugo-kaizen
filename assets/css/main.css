@@ -442,6 +442,70 @@
     .related > ul > li:dir(rtl) {
       list-style-type: '  ≅';
     }
+
+    #search-label {
+      position: relative;
+    }
+
+    #search-icon {
+      block-size: 1rem;
+      inline-size: 1rem;
+      inset-block-start: 0.5rem;
+      inset-inline-start: 0.3rem;
+      pointer-events: none;
+      position: absolute;
+    }
+
+    #search-input {
+      background-color: transparent;
+      block-size: 2rem;
+      border: 0.056rem solid color-mix(in srgb, var(--color) 18.6%, transparent);
+      border-radius: 0.236rem;
+      box-shadow: var(--color) 0 0 0.09rem;
+      color: var(--color);
+      display: block;
+      font-size: 1rem;
+      inline-size: 100%;
+      margin-block: 1.618rem;
+      margin-inline: 0;
+      max-inline-size: 20rem;
+      padding-block: 0.186rem;
+      padding-inline-end: 0.3rem;
+      padding-inline-start: 1.6rem;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    #search-input:focus {
+      background-color: color-mix(in srgb, var(--color) 5.6%, transparent);
+      border-color: color-mix(in srgb, var(--color) 30%, transparent);
+      outline: none;
+    }
+
+    #search-input::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      display: none;
+    }
+
+    #search-results {
+      min-block-size: 20rem;
+    }
+
+    #search-results .query {
+      font-weight: 600;
+    }
+
+    #search-results ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #search-results ul > li:dir(ltr) {
+      list-style-type: '◎  ';
+    }
+    #search-results ul > li:dir(rtl) {
+      list-style-type: '  ◎';
+    }
   }
 
   @layer utilities {
