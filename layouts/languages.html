@@ -1,0 +1,9 @@
+{{- define "main" }}
+  <section>
+    <h2 class="section-title">{{ .Title }}</h2>
+
+{{ .Content }}
+
+{{ partial "languages.html" . }}
+  </section>
+{{- end }}
