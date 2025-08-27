@@ -4,7 +4,7 @@ licenselink = "https://opensource.org/licenses/MIT"
 description = "A minimalistic Hugo theme that keeps getting better"
 homepage = "https://github.com/mjethani/hugo-kaizen"
 tags = ["dark", "extensible", "i18n", "l10n", "light", "minimal", "multilingual", "responsive", "robots", "rtl", "sideways", "typography", "vertical",]
-min_version = "0.148.0"
+min_version = "0.149.0"
 
 [author]
   name = "Manish Jethani"

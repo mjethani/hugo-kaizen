@@ -1,13 +1,6 @@
 /* Copyright (c) 2025 Manish Jethani */
 
 @layer {
-  /* Hugo doesn't minify CSS inside layers.
-   *
-   * This has now been addressed in the parser:
-   * https://github.com/tdewolff/parse/pull/126
-   * The fix should be included in v0.148.3:
-   * https://github.com/gohugoio/hugo/commit/885cd299b78dba363f37f279f4de05d074b3c3d4
-   */
   @layer tokens {
     :root {
       --background-color: #fdfdfd;
