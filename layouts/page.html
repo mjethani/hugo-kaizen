@@ -8,6 +8,12 @@
     {{- $dateHuman := .Date | time.Format ":date_long" }}
       <time class="article-date" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
   {{- end }}
+
+  {{- if .IsTranslated }}
+      <nav class="article-translations">
+{{ partial "translations.html" . }}
+      </nav>
+  {{- end }}
     </header>
     <div class="article-content">
 

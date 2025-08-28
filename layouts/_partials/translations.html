@@ -1,0 +1,13 @@
+{{- /*
+Renders a list of translations for the page.
+
+@context {page} . The current page.
+
+@example: {{ partial "translations.html" . }}
+*/}}
+
+<ul>
+{{- range .Translations }}
+  <li lang="{{ .Language.Lang }}"><a rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">{{ .Language.LanguageName | default .Language.Lang }}</a></li>
+{{- end }}
+</ul>
