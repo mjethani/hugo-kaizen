@@ -119,6 +119,10 @@
       text-align: start;
     }
 
+    code {
+      font-family: ui-monospace, monospace;
+    }
+
     :not(pre) > code {
       font-size: 0.786rem;
     }
