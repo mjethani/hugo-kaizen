@@ -546,15 +546,7 @@
     }
 
     pre {
-      background-color: #1f1f24;
-      color: #fff;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      pre {
-        background-color: #282828;
-        color: #ebdbb2;
-      }
+      background-color: color-mix(in srgb, var(--color) 5.6%, transparent);
     }
   }
 }
