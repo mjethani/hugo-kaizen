@@ -546,8 +546,8 @@
     }
 
     pre {
-      background-color: #272822;
-      color: #f8f8f2;
+      background-color: #1f1f24;
+      color: #fff;
     }
 
     @media (prefers-color-scheme: dark) {
