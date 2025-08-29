@@ -380,11 +380,14 @@
       margin: 0;
     }
 
+    .article-translations {
+      font-size: 0.786rem;
+      font-weight: 300;
+    }
+
     .article-translations ul {
       display: flex;
       flex-wrap: wrap;
-      font-size: 0.786rem;
-      font-weight: 300;
       gap: 0.618rem 1.618rem;
       list-style: none;
       margin: 0;
@@ -397,10 +400,10 @@
     }
 
     .article-translations ul > li:dir(ltr) {
-      list-style-type: '❡  ';
+      list-style-type: '∼  ';
     }
     .article-translations ul > li:dir(rtl) {
-      list-style-type: '  ❡';
+      list-style-type: '  ∽';
     }
 
     .article-content {
