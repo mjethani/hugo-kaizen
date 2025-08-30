@@ -447,7 +447,6 @@
     }
 
     .article-tags ul {
-      color: color-mix(in srgb, var(--color) 78.6%, transparent);
       display: flex;
       flex-wrap: wrap;
       gap: 0.618rem 1rem;
@@ -550,15 +549,6 @@
 
     .nowrap {
       white-space: nowrap;
-    }
-  }
-
-  @layer theme {
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --background-color: #1c1b1a;
-        --color: #e8e6e3;
-      }
     }
   }
 }
