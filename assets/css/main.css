@@ -105,6 +105,7 @@
     }
 
     pre {
+      background-color: color-mix(in srgb, var(--color) 5.6%, transparent);
       border-radius: 0.486rem;
       font-size: 0.786rem;
       margin: 0;
@@ -558,10 +559,6 @@
         --background-color: #1c1b1a;
         --color: #e8e6e3;
       }
-    }
-
-    pre {
-      background-color: color-mix(in srgb, var(--color) 5.6%, transparent);
     }
   }
 }
