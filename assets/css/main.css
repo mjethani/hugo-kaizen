@@ -257,6 +257,17 @@
       margin-block-start: 1.618rem;
     }
 
+    /* min-inline-size is not supported inside media queries yet. */
+    @media (min-width: 30rem) {
+      body > footer {
+        flex-direction: row;
+      }
+
+      body > footer > * {
+        flex: 1;
+      }
+    }
+
     .menu {
       order: -1;
     }
