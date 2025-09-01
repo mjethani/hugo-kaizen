@@ -8,6 +8,7 @@
       --font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', 'Noto Serif', 'DejaVu Serif', serif;
       --font-size: 1rem;
       --font-weight: 400;
+      --link-color: var(--color);
       --max-inline-size: 30rem;
       --writing-mode: horizontal-tb;
     }
@@ -37,7 +38,7 @@
     }
 
     a {
-      color: var(--color);
+      color: var(--link-color);
       text-decoration: underline;
       text-decoration-style: solid;
       text-underline-offset: 0.382em;
