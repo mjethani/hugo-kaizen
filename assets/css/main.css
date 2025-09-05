@@ -11,6 +11,7 @@
       --font-family: ui-serif, serif;
       --font-size: 1rem;
       --font-weight: 400;
+      --footer-font-family: var(--font-family);
       --heading-line-height: 1.272;
       --line-height: 1.618;
       --link-color: var(--color);
@@ -47,6 +48,10 @@
   }
 
   @layer typography {
+    body > footer {
+      font-family: var(--footer-font-family);
+    }
+
     a {
       color: var(--link-color);
       text-decoration: underline;
