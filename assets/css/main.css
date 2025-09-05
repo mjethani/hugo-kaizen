@@ -547,7 +547,7 @@
 
   @layer utilities {
     .num {
-      text-align: start;
+      text-align: end;
     }
 
     .nowrap {
