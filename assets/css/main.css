@@ -9,6 +9,8 @@
       --font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', 'Noto Serif', 'DejaVu Serif', serif;
       --font-size: 1rem;
       --font-weight: 400;
+      --heading-line-height: 1.272;
+      --line-height: 1.618;
       --link-color: var(--color);
       --link-text-decoration-style: solid;
       --max-inline-size: 30rem;
@@ -36,7 +38,7 @@
 
   @layer typography {
     body {
-      line-height: 1.618;
+      line-height: var(--line-height);
     }
 
     a {
@@ -56,7 +58,7 @@
 
     h1, h2, h3, h4, h5, h6 {
       font-weight: 600;
-      line-height: 1.272;
+      line-height: var(--heading-line-height);
       margin: 0;
       margin-block-end: 1rem;
       margin-block-start: 1.618rem;
