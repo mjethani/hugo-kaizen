@@ -17,6 +17,7 @@
       --link-text-decoration-style: solid;
       --link-text-underline-offset: 0.382em;
       --max-inline-size: 30rem;
+      --title-font-size: 1.272rem;
       --title-letter-spacing: 0.236rem;
       --title-text-transform: uppercase;
       --writing-mode: horizontal-tb;
@@ -329,7 +330,7 @@
     }
 
     .title {
-      font-size: 1.272rem;
+      font-size: var(--title-font-size);
       font-weight: 500;
       inline-size: 100%;
       letter-spacing: var(--title-letter-spacing);
@@ -339,7 +340,7 @@
     }
 
     html:not(.home-kind) .title {
-      font-size: 0.786rem;
+      font-size: calc(var(--title-font-size) * 0.618);
     }
 
     .menu nav ul {
