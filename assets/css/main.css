@@ -8,7 +8,7 @@
       --bold-font-weight: 600;
       --code-font-family: ui-monospace, monospace;
       --color: #111;
-      --font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', 'Noto Serif', 'DejaVu Serif', serif;
+      --font-family: ui-serif, serif;
       --font-size: 1rem;
       --font-weight: 400;
       --heading-line-height: 1.272;
