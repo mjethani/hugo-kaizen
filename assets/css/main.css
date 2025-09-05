@@ -13,6 +13,7 @@
       --line-height: 1.618;
       --link-color: var(--color);
       --link-text-decoration-style: solid;
+      --link-text-underline-offset: 0.382em;
       --max-inline-size: 30rem;
       --writing-mode: horizontal-tb;
     }
@@ -45,7 +46,7 @@
       color: var(--link-color);
       text-decoration: underline;
       text-decoration-style: var(--link-text-decoration-style);
-      text-underline-offset: 0.382em;
+      text-underline-offset: var(--link-text-underline-offset);
     }
 
     a.active {
