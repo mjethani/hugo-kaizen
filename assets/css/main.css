@@ -32,21 +32,18 @@
     :root {
       font-family: var(--font-family);
       font-size: var(--font-size);
-      font-weight: var(--font-weight);
       writing-mode: var(--writing-mode);
     }
 
     body {
       background-color: var(--background-color);
       color: var(--color);
+      font-weight: var(--font-weight);
+      line-height: var(--line-height);
     }
   }
 
   @layer typography {
-    body {
-      line-height: var(--line-height);
-    }
-
     a {
       color: var(--link-color);
       text-decoration: underline;
