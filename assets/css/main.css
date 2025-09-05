@@ -5,6 +5,7 @@
     :root {
       --active-link-text-decoration-style: double;
       --background-color: #fdfdfd;
+      --bold-font-weight: 600;
       --code-font-family: ui-monospace, monospace;
       --color: #111;
       --font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', 'Noto Serif', 'DejaVu Serif', serif;
@@ -54,12 +55,12 @@
       text-decoration-style: var(--active-link-text-decoration-style);
     }
 
-    strong {
-      font-weight: 600;
+    b, strong {
+      font-weight: var(--bold-font-weight);
     }
 
     h1, h2, h3, h4, h5, h6 {
-      font-weight: 600;
+      font-weight: var(--bold-font-weight);
       line-height: var(--heading-line-height);
       margin: 0;
       margin-block-end: 1rem;
@@ -211,7 +212,7 @@
     }
 
     th {
-      font-weight: 600;
+      font-weight: var(--bold-font-weight);
     }
 
     tbody tr:nth-child(odd) {
