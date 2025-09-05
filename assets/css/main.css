@@ -5,6 +5,7 @@
     :root {
       --active-link-text-decoration-style: double;
       --background-color: #fdfdfd;
+      --code-font-family: ui-monospace, monospace;
       --color: #111;
       --font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', 'Noto Serif', 'DejaVu Serif', serif;
       --font-size: 1rem;
@@ -127,7 +128,7 @@
     }
 
     code {
-      font-family: ui-monospace, monospace;
+      font-family: var(--code-font-family);
     }
 
     :not(pre) > code {
