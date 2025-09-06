@@ -17,6 +17,7 @@
       --link-text-decoration-style: solid;
       --link-text-underline-offset: 0.382em;
       --max-inline-size: 30rem;
+      --title-color: var(--color);
       --title-font-size: 1.272rem;
       --title-font-weight: 500;
       --title-letter-spacing: 0.236rem;
@@ -328,6 +329,7 @@
     }
 
     .title {
+      color: var(--title-color);
       font-size: var(--title-font-size);
       font-weight: var(--title-font-weight);
       inline-size: 100%;
