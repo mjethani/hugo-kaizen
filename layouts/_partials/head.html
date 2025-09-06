@@ -27,9 +27,7 @@
 {{ partialCached "head/js.html" . }}
 
 {{- if eq .Layout "search" }}
-  <script>
-{{ partial "search.js" . | safeJS }}
-  </script>
+{{ partial "head/search.html" . }}
 {{- end }}
 
 {{- if templates.Exists "_partials/head/extensions.html" }}

@@ -1,0 +1,7 @@
+{{- with resources.Get "_templates/search.js" | resources.ExecuteAsTemplate "js/search.js" $ | minify | fingerprint }}
+  {{- if site.Params.unsafeInlineJS }}
+<script>{{ .Content | safeJS }}</script>
+  {{- else }}
+<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
+  {{- end }}
+{{- end }}
