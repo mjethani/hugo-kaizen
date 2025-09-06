@@ -125,6 +125,13 @@
       list-style-type: '  ←';
     }
 
+    .taxonomy-kind main > section > ul > li:dir(ltr) {
+      list-style-type: '⧉  ';
+    }
+    .taxonomy-kind main > section > ul > li:dir(rtl) {
+      list-style-type: '  ⧉';
+    }
+
     pre {
       background-color: color-mix(in srgb, var(--color) 5.6%, transparent);
       border-radius: 0.486rem;
