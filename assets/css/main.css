@@ -376,7 +376,6 @@
     }
 
     .menu nav ul > li {
-      line-height: 1;
       margin: 0;
       padding: 0;
     }
@@ -470,7 +469,6 @@
 
     .article-tags ul > li {
       display: inline-flex;
-      line-height: 1;
       margin: 0;
       padding: 0;
     }
