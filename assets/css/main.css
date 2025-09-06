@@ -7,9 +7,9 @@
       --active-link-text-decoration-style: double;
       --background-color: #fdfdfd;
       --bold-font-weight: 600;
-      --code-font-family: ui-monospace, monospace;
+      --code-font-family: monospace;
       --color: #111;
-      --font-family: ui-serif, serif;
+      --font-family: serif;
       --font-size: 1rem;
       --font-weight: 400;
       --footer-font-family: var(--font-family);
