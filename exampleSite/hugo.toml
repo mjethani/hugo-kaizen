@@ -1,0 +1,64 @@
+baseURL = 'https://example.com/'
+
+enableRobotsTXT = true
+mainSections = ['posts']
+summaryLength = 20
+titleCaseStyle = 'none'
+
+[languages]
+  [languages.en]
+    languageName = 'English'
+    weight = 1
+
+    languageCode = 'en'
+    title = 'Kaizen'
+    copyright = 'Copyright © 2025 Manish Jethani. All rights reserved.'
+
+[module]
+  [[module.imports]]
+    path = '../..'
+
+[params]
+  includeMarkdownSource = true
+
+  [params.author]
+    name = 'Manish Jethani'
+    email = 'hello@manishjethani.com'
+
+  [params.robots]
+    [[params.robots.rules]]
+      userAgent = '*'
+      allow = ['/']
+
+# https://gohugo.io/configuration/related-content/
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = true
+  [[related.indices]]
+    applyFilter = false
+    cardinalityThreshold = 0
+    name = 'keywords'
+    pattern = ''
+    toLower = true
+    type = 'basic'
+    weight = 100
+  [[related.indices]]
+    applyFilter = false
+    cardinalityThreshold = 0
+    name = 'date'
+    pattern = ''
+    toLower = true
+    type = 'basic'
+    weight = 10
+  [[related.indices]]
+    applyFilter = false
+    cardinalityThreshold = 0
+    name = 'tags'
+    pattern = ''
+    toLower = true
+    type = 'basic'
+    weight = 80
+
+[taxonomies]
+  tag = 'tags'

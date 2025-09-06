@@ -1,0 +1,10 @@
+:root {
+  --font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', 'Noto Serif', 'DejaVu Serif', serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1e1f1c;
+    --color: #e0e0e0;
+  }
+}

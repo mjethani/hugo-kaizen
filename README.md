@@ -3,3 +3,11 @@
 This is a simple Hugo theme for my website.
 
 https://manishjethani.com/
+
+---
+
+```
+cd exampleSite
+hugo server
+open http://localhost:1313
+```
