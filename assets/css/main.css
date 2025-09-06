@@ -438,8 +438,7 @@
 
     .article-content {
       margin-trim: block;
-      margin-block-start: 2.058rem;
-      margin-block-end: 1.618rem;
+      margin-block: 2.058rem;
     }
 
     @supports not (margin-trim: block) {
