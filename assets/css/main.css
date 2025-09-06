@@ -37,6 +37,7 @@
 
     :root {
       accent-color: var(--accent-color);
+      color-scheme: light dark;
       font-family: var(--font-family);
       font-size: var(--font-size);
       writing-mode: var(--writing-mode);
