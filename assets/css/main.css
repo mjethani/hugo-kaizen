@@ -3,6 +3,7 @@
 @layer {
   @layer tokens {
     :root {
+      --accent-color: auto;
       --active-link-text-decoration-style: double;
       --background-color: #fdfdfd;
       --bold-font-weight: 600;
@@ -35,6 +36,7 @@
     }
 
     :root {
+      accent-color: var(--accent-color);
       font-family: var(--font-family);
       font-size: var(--font-size);
       writing-mode: var(--writing-mode);
