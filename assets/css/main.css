@@ -353,7 +353,6 @@
       font-weight: var(--title-font-weight);
       inline-size: 100%;
       letter-spacing: var(--title-letter-spacing);
-      line-height: 1;
       margin: 0;
       text-transform: var(--title-text-transform);
     }
