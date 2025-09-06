@@ -286,7 +286,7 @@
       flex-direction: column;
       gap: 0.618rem;
       margin-block-end: 1rem;
-      margin-block-start: 1.618rem;
+      margin-block-start: 2.058rem;
     }
 
     /* min-inline-size is not supported inside media queries yet. */
