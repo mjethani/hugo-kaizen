@@ -18,6 +18,7 @@
       --link-text-decoration-style: solid;
       --link-text-underline-offset: 0.382em;
       --max-inline-size: 30rem;
+      --nav-font-family: var(--font-family);
       --title-color: var(--color);
       --title-font-family: var(--font-family);
       --title-font-size: 1.272rem;
@@ -50,6 +51,10 @@
   @layer typography {
     body > footer {
       font-family: var(--footer-font-family);
+    }
+
+    nav {
+      font-family: var(--nav-font-family);
     }
 
     a {
