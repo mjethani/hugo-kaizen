@@ -526,6 +526,10 @@
       outline: none;
     }
 
+    #search-input::placeholder {
+      color: color-mix(in srgb, var(--color) 38.2%, transparent);
+    }
+
     #search-input::-webkit-search-cancel-button {
       -webkit-appearance: none;
       display: none;
