@@ -2,6 +2,10 @@
   --font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', 'Noto Serif', 'DejaVu Serif', serif;
 }
 
+:root {
+  color-scheme: light dark;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #1e1f1c;
