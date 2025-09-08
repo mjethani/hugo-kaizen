@@ -34,7 +34,7 @@
   }
 
   @layer design {
-{{- with default "basic" site.Params.design }}
+{{- with default "kaizen" site.Params.design }}
   {{- if reflect.IsSlice . }}
     {{- range . }}
       {{- if .atMediaPrelude }}
