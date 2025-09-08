@@ -1,0 +1,79 @@
+/* Copyright (c) 2025 Manish Jethani */
+
+@layer layout {
+  body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-inline: 1.618rem;
+  }
+
+  body > * {
+    inline-size: 100%;
+    max-inline-size: var(--kaizen--max-inline-size);
+  }
+
+  body > header {
+    display: flex;
+    flex-direction: column;
+    gap: 2.058rem;
+    margin-block-end: 2.058rem;
+    margin-block-start: 1rem;
+  }
+
+  body > footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.618rem;
+    margin-block-end: 1rem;
+    margin-block-start: 2.058rem;
+  }
+
+  /* min-inline-size is not supported inside media queries yet. */
+  @media (min-width: 30rem) {
+    body > footer {
+      flex-direction: row;
+    }
+
+    body > footer > * {
+      flex: 1;
+    }
+  }
+
+  .menu {
+    order: -1;
+  }
+
+  main > :first-child {
+    margin-trim: block-start;
+  }
+
+  main > :last-child {
+    margin-trim: block-end;
+  }
+
+  main > :only-child {
+    margin-trim: block;
+  }
+
+  @supports not (margin-trim: block) {
+    main > :first-child > :first-child,
+    main > :first-child > :first-child > :first-child,
+    main > :first-child > :first-child > :first-child > :first-child {
+      margin-block-start: 0;
+    }
+
+    main > :last-child > :last-child,
+    main > :last-child > :last-child > :last-child,
+    main > :last-child > :last-child > :last-child > :last-child {
+      margin-block-end: 0;
+    }
+  }
+
+  main > article > header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

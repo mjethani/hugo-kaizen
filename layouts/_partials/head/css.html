@@ -1,4 +1,4 @@
-{{- with resources.Get "css/main.css" }}
+{{- with resources.Get "_templates/main.css" | resources.ExecuteAsTemplate "css/main.css" $ }}
   {{- with . | minify | fingerprint }}
     {{- if site.Params.unsafeInlineCSS }}
 <style>{{ .Content | safeCSS }}</style>

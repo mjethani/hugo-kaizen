@@ -1,0 +1,211 @@
+/* Copyright (c) 2025 Manish Jethani */
+
+@layer typography {
+  body > footer {
+    font-family: var(--kaizen--footer-font-family);
+  }
+
+  nav {
+    font-family: var(--kaizen--nav-font-family);
+  }
+
+  a {
+    color: var(--kaizen--link-color);
+    text-decoration: underline;
+    text-decoration-style: var(--kaizen--link-text-decoration-style);
+    text-underline-offset: var(--kaizen--link-text-underline-offset);
+  }
+
+  a.active {
+    text-decoration-style: var(--kaizen--active-link-text-decoration-style);
+  }
+
+  b, strong {
+    font-weight: var(--kaizen--bold-font-weight);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--kaizen--heading-font-weight);
+    letter-spacing: var(--kaizen--heading-letter-spacing);
+    line-height: var(--kaizen--heading-line-height);
+    margin: 0;
+    margin-block-end: 1rem;
+    margin-block-start: 1.618rem;
+    text-transform: var(--kaizen--heading-text-transform);
+  }
+
+  h1 {
+    font-size: 2.058rem;
+  }
+
+  h2 {
+    font-size: 1.618rem;
+  }
+
+  h3 {
+    font-size: 1.272rem;
+  }
+
+  h4, h5, h6 {
+    font-size: 1rem;
+  }
+
+  p {
+    margin: 0;
+    margin-block-end: 1rem;
+  }
+
+  ul, ol {
+    margin: 0;
+    margin-block-end: 1rem;
+    margin-inline-start: 1.618rem;
+    padding: 0;
+  }
+
+  li + li {
+    margin-block-start: 0.382rem;
+  }
+
+  main > section > ul,
+  main > aside > ul {
+    list-style: none;
+    margin-inline-start: 0;
+  }
+
+  main > section > ul > li:dir(ltr) {
+    list-style-type: '→  ';
+  }
+  main > section > ul > li:dir(rtl) {
+    list-style-type: '  ←';
+  }
+
+  .taxonomy-kind main > section > ul > li:dir(ltr) {
+    list-style-type: '⧉  ';
+  }
+  .taxonomy-kind main > section > ul > li:dir(rtl) {
+    list-style-type: '  ⧉';
+  }
+
+  pre {
+    background-color: color-mix(in srgb, var(--kaizen--color) 5.6%, transparent);
+    border-radius: 0.486rem;
+    font-size: 0.786rem;
+    margin: 0;
+    margin-block: 1.618rem;
+    padding: 0.618rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  pre:has(> code:only-child) {
+    direction: ltr;
+    text-align: start;
+  }
+
+  code {
+    font-family: var(--kaizen--code-font-family);
+  }
+
+  :not(pre) > code {
+    font-size: 0.786rem;
+  }
+
+  img {
+    display: block;
+    block-size: auto;
+    inline-size: auto;
+    margin: 0;
+    margin-block: 1.618rem;
+    max-inline-size: 100%;
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    gap: 0.618rem;
+    margin: 0;
+    margin-block: 1.618rem;
+  }
+
+  figure > * {
+    margin: 0;
+  }
+
+  figure > figcaption {
+    font-size: 0.786rem;
+  }
+
+  blockquote {
+    border-inline-start: 0.115rem solid color-mix(in srgb, var(--kaizen--color) 11.5%, transparent);
+    color: color-mix(in srgb, var(--kaizen--color) 78.6%, transparent);
+    margin: 0;
+    margin-block: 1.618rem;
+    padding: 0;
+    padding-inline-start: 1rem;
+  }
+
+  blockquote > footer {
+    font-size: 0.786rem;
+  }
+
+  blockquote > footer > cite:only-child {
+    display: flex;
+    font-style: normal;
+  }
+
+  blockquote > footer > cite:only-child::before {
+    content: '―';
+    margin-inline-end: 0.236rem;
+  }
+
+  table {
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+    inline-size: 100%;
+    margin: 0;
+    margin-block: 1.618rem;
+  }
+
+  caption {
+    caption-side: block-end;
+    color: color-mix(in srgb, var(--kaizen--color) 61.8%, transparent);
+    font-size: 0.786rem;
+    padding-block-start: 0.486rem;
+  }
+
+  thead th {
+    background-color: color-mix(in srgb, var(--kaizen--color) 14.6%, transparent);
+    text-align: start;
+  }
+
+  th, td {
+    border-block-end: 0.071rem solid color-mix(in srgb, var(--kaizen--color) 18.6%, transparent);
+    padding-block: 0.486rem;
+    padding-inline: 0.618rem;
+    vertical-align: top;
+  }
+
+  th {
+    font-weight: var(--kaizen--bold-font-weight);
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: color-mix(in srgb, var(--kaizen--color) 5.6%, transparent);
+  }
+
+  tbody tr:hover {
+    background-color: color-mix(in srgb, var(--kaizen--color) 11.5%, transparent);
+  }
+
+  th[scope=row] {
+    text-align: start;
+  }
+
+  td > :first-child, th > :first-child {
+    margin-block-start: 0;
+  }
+
+  td > :last-child, th > :last-child  {
+    margin-block-end: 0;
+  }
+}

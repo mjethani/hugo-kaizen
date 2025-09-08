@@ -1,0 +1,40 @@
+/* Copyright (c) 2025 Manish Jethani */
+
+@layer {
+  @layer tokens {
+    :root {
+      --kaizen--accent-color: auto;
+      --kaizen--active-link-text-decoration-style: double;
+      --kaizen--background-color: white;
+      --kaizen--bold-font-weight: 600;
+      --kaizen--code-font-family: monospace;
+      --kaizen--color: black;
+      --kaizen--font-family: sans-serif;
+      --kaizen--font-size: 1rem;
+      --kaizen--font-weight: 400;
+      --kaizen--footer-font-family: var(--kaizen--font-family);
+      --kaizen--heading-font-weight: var(--kaizen--bold-font-weight);
+      --kaizen--heading-letter-spacing: normal;
+      --kaizen--heading-line-height: 1.272;
+      --kaizen--heading-text-transform: none;
+      --kaizen--line-height: 1.618;
+      --kaizen--link-color: var(--kaizen--color);
+      --kaizen--link-text-decoration-style: solid;
+      --kaizen--link-text-underline-offset: 0.382em;
+      --kaizen--max-inline-size: 30rem;
+      --kaizen--nav-font-family: var(--kaizen--font-family);
+      --kaizen--title-color: var(--kaizen--color);
+      --kaizen--title-font-family: var(--kaizen--font-family);
+      --kaizen--title-font-size: 2.058rem;
+      --kaizen--title-font-weight: var(--kaizen--heading-font-weight);
+      --kaizen--title-letter-spacing: var(--kaizen--heading-letter-spacing);
+      --kaizen--title-text-transform: var(--kaizen--heading-text-transform);
+      --kaizen--writing-mode: horizontal-tb;
+    }
+  }
+
+  @layer design {
+{{- $design := site.Params.design | default "default" }}
+{{ partialCached (printf "designs/%s.css" $design) . }}
+  }
+}

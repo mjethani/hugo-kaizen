@@ -1,0 +1,11 @@
+/* Copyright (c) 2025 Manish Jethani */
+
+@layer utilities {
+  .num {
+    text-align: end;
+  }
+
+  .nowrap {
+    white-space: nowrap;
+  }
+}

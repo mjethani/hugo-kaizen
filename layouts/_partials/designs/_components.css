@@ -1,0 +1,222 @@
+/* Copyright (c) 2025 Manish Jethani */
+
+@layer components {
+  .copyright, .powered-by {
+    font-size: 0.786rem;
+    font-weight: 300;
+    margin: 0;
+    text-align: center;
+  }
+
+  .powered-by a {
+    font-weight: 600;
+  }
+
+  .title {
+    color: var(--kaizen--title-color);
+    font-family: var(--kaizen--title-font-family);
+    font-size: var(--kaizen--title-font-size);
+    font-weight: var(--kaizen--title-font-weight);
+    inline-size: 100%;
+    letter-spacing: var(--kaizen--title-letter-spacing);
+    margin: 0;
+    text-transform: var(--kaizen--title-text-transform);
+  }
+
+  html:not(.home-kind) .title {
+    font-size: calc(var(--kaizen--title-font-size) * 0.618);
+  }
+
+  .menu nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 300;
+    font-size: 0.786rem;
+    gap: 1.618rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu nav ul > li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu nav ul > li:has(> a[href^='/'])::before {
+    content: '⟨ ';
+  }
+
+  .menu nav ul > li:has(> a[href^='/'])::after {
+    content: ' ⟩';
+  }
+
+  .menu nav ul > li:not(:has(> a[href^='/']))::before {
+    content: '⟪ ';
+  }
+
+  .menu nav ul > li:not(:has(> a[href^='/']))::after {
+    content: ' ⟫';
+  }
+
+  .article-title {
+    font-size: 2.618rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .article-date {
+    display: block;
+    font-size: 0.786rem;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .article-translations {
+    font-size: 0.786rem;
+    font-weight: 300;
+  }
+
+  .article-translations ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.618rem 1.618rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .article-translations ul > li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .article-translations ul > li:dir(ltr) {
+    list-style-type: '∼  ';
+  }
+  .article-translations ul > li:dir(rtl) {
+    list-style-type: '  ∽';
+  }
+
+  .article-content {
+    margin-trim: block;
+    margin-block-start: 2.058rem;
+    margin-block-end: 1.618rem;
+  }
+
+  @supports not (margin-trim: block) {
+    .article-content > :first-child,
+    .article-content > :first-child > :first-child,
+    .article-content > :first-child > :first-child > :first-child {
+      margin-block-start: 0;
+    }
+
+    .article-content > :last-child,
+    .article-content > :last-child > :last-child,
+    .article-content > :last-child > :last-child > :last-child {
+      margin-block-end: 0;
+    }
+  }
+
+  .article-tags > div > div {
+    display: none;
+  }
+
+  .article-tags ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.618rem 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .article-tags ul > li {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .article-tags ul > li a::before {
+    content: '#';
+  }
+
+  .related {
+    margin-block-start: 2.058rem;
+  }
+
+  .related > ul > li:dir(ltr) {
+    list-style-type: '≅  ';
+  }
+  .related > ul > li:dir(rtl) {
+    list-style-type: '  ≅';
+  }
+
+  #search-label {
+    position: relative;
+  }
+
+  #search-icon {
+    block-size: 1rem;
+    inline-size: 1rem;
+    inset-block-start: 0.5rem;
+    inset-inline-start: 0.3rem;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  #search-input {
+    background-color: transparent;
+    block-size: 2rem;
+    border: 0.056rem solid color-mix(in srgb, var(--kaizen--color) 18.6%, transparent);
+    border-radius: 0.236rem;
+    box-shadow: var(--kaizen--color) 0 0 0.09rem;
+    color: var(--kaizen--color);
+    display: block;
+    font-size: 1rem;
+    inline-size: 100%;
+    margin-block: 1.618rem;
+    margin-inline: 0;
+    max-inline-size: 20rem;
+    padding-block: 0.186rem;
+    padding-inline-end: 0.3rem;
+    padding-inline-start: 1.6rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  #search-input:focus {
+    background-color: color-mix(in srgb, var(--kaizen--color) 5.6%, transparent);
+    border-color: color-mix(in srgb, var(--kaizen--color) 30%, transparent);
+    outline: none;
+  }
+
+  #search-input::placeholder {
+    color: color-mix(in srgb, var(--kaizen--color) 38.2%, transparent);
+  }
+
+  #search-input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    display: none;
+  }
+
+  #search-results {
+    min-block-size: 20rem;
+  }
+
+  #search-results .query {
+    font-weight: 600;
+  }
+
+  #search-results ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #search-results ul > li:dir(ltr) {
+    list-style-type: '◎  ';
+  }
+  #search-results ul > li:dir(rtl) {
+    list-style-type: '  ◎';
+  }
+}

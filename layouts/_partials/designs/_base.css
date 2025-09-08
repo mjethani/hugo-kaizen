@@ -1,0 +1,21 @@
+/* Copyright (c) 2025 Manish Jethani */
+
+@layer base {
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+
+  :root {
+    accent-color: var(--kaizen--accent-color);
+    font-family: var(--kaizen--font-family);
+    font-size: var(--kaizen--font-size);
+    writing-mode: var(--kaizen--writing-mode);
+  }
+
+  body {
+    background-color: var(--kaizen--background-color);
+    color: var(--kaizen--color);
+    font-weight: var(--kaizen--font-weight);
+    line-height: var(--kaizen--line-height);
+  }
+}
