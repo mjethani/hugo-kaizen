@@ -34,7 +34,7 @@
   }
 
   @layer design {
-{{- with default "default" site.Params.design }}
+{{- with default "basic" site.Params.design }}
   {{- if reflect.IsMap . }}
     {{- range $key, $value := . }}
       {{- if $value.mediaPrelude }}

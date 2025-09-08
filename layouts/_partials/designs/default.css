@@ -1,7 +1,0 @@
-/* Copyright (c) 2025 Manish Jethani */
-
-{{ partialCached "designs/_base.css" . }}
-{{ partialCached "designs/_typography.css" . }}
-{{ partialCached "designs/_layout.css" . }}
-{{ partialCached "designs/_components.css" . }}
-{{ partialCached "designs/_utilities.css" . }}
