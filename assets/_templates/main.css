@@ -35,18 +35,18 @@
 
   @layer design {
 {{- with default "basic" site.Params.design }}
-  {{- if reflect.IsMap . }}
-    {{- range $key, $value := . }}
-      {{- if $value.mediaPrelude }}
-    @media {{ $value.mediaPrelude }} {
-{{ partialCached (printf "designs/%s.css" $key) $value }}
-    }
+  {{- if reflect.IsSlice . }}
+    {{- range . }}
+      {{- if .mediaPrelude }}
+      @media {{ .mediaPrelude }} {
+{{ partial (printf "designs/%s.css" .name) . }}
+      }
       {{- else }}
-{{ partialCached (printf "designs/%s.css" $key) $value }}
+{{ partial (printf "designs/%s.css" .name) . }}
       {{- end }}
     {{- end }}
   {{- else }}
-{{ partialCached (printf "designs/%s.css" .) dict }}
+{{ partial (printf "designs/%s.css" .) dict }}
   {{- end }}
 {{- end }}
   }
