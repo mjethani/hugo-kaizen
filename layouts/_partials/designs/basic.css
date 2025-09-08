@@ -6,21 +6,42 @@
 {{ partialCached "designs/_components.css" . }}
 {{ partialCached "designs/_utilities.css" . }}
 
-{{-
-  $defaultParams := dict
-    "backgroundColor" "white"
-    "color" "black"
-    "linkColor" "var(--color)"
+{{- $keys := slice
+  "accentColor"
+  "activeLinkTextDecorationStyle"
+  "backgroundColor"
+  "boldFontWeight"
+  "codeFontFamily"
+  "color"
+  "fontFamily"
+  "fontSize"
+  "fontWeight"
+  "footerFontFamily"
+  "headingFontWeight"
+  "headingLetterSpacing"
+  "headingLineHeight"
+  "headingTextTransform"
+  "lineHeight"
+  "linkColor"
+  "linkTextDecorationStyle"
+  "linkTextUnderlineOffset"
+  "maxInlineSize"
+  "navFontFamily"
+  "titleColor"
+  "titleFontFamily"
+  "titleFontSize"
+  "titleFontWeight"
+  "titleLetterSpacing"
+  "titleTextTransform"
+  "writingMode"
 }}
-
-{{- with merge $defaultParams . }}
 
 @layer colors {
   :root {
-    --kaizen--background-color: {{ .backgroundColor }};
-    --kaizen--color: {{ .color }};
-    --kaizen--link-color: {{ .linkColor }};
+{{- range $keys }}
+  {{- if isset $ . }}
+  --kaizen--{{ lower (replaceRE "([a-z0-9])([A-Z])" "$1-$2" .) }}: {{ index $ . }};
+  {{- end }}
+{{- end }}
   }
 }
-
-{{- end }} {{- /* with merge $defaultParams . */}}
