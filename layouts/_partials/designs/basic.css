@@ -10,7 +10,7 @@
   $defaultParams := dict
     "backgroundColor" "white"
     "color" "black"
-    "linkColor" "blue"
+    "linkColor" "var(--color)"
 }}
 
 {{- with merge $defaultParams . }}
