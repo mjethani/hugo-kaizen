@@ -37,7 +37,13 @@
 {{- with default "default" site.Params.design }}
   {{- if reflect.IsMap . }}
     {{- range $key, $value := . }}
+      {{- if $value.mediaPrelude }}
+    @media {{ $value.mediaPrelude }} {
 {{ partialCached (printf "designs/%s.css" $key) $value }}
+    }
+      {{- else }}
+{{ partialCached (printf "designs/%s.css" $key) $value }}
+      {{- end }}
     {{- end }}
   {{- else }}
 {{ partialCached (printf "designs/%s.css" .) dict }}
