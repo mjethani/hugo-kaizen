@@ -5,15 +5,17 @@
     :root {
       --accent-color: auto;
       --active-link-text-decoration-style: double;
-      --background-color: #fdfdfd;
+      --background-color: white;
       --bold-font-weight: 600;
       --code-font-family: monospace;
-      --color: #111;
-      --font-family: serif;
+      --color: black;
+      --font-family: sans-serif;
       --font-size: 1rem;
       --font-weight: 400;
       --footer-font-family: var(--font-family);
+      --heading-letter-spacing: normal;
       --heading-line-height: 1.272;
+      --heading-text-transform: none;
       --line-height: 1.618;
       --link-color: var(--color);
       --link-text-decoration-style: solid;
@@ -23,9 +25,9 @@
       --title-color: var(--color);
       --title-font-family: var(--font-family);
       --title-font-size: 1.272rem;
-      --title-font-weight: 500;
-      --title-letter-spacing: 0.236rem;
-      --title-text-transform: uppercase;
+      --title-font-weight: var(--bold-font-weight);
+      --title-letter-spacing: normal;
+      --title-text-transform: none;
       --writing-mode: horizontal-tb;
     }
   }
@@ -76,10 +78,12 @@
 
     h1, h2, h3, h4, h5, h6 {
       font-weight: var(--bold-font-weight);
+      letter-spacing: var(--heading-letter-spacing);
       line-height: var(--heading-line-height);
       margin: 0;
       margin-block-end: 1rem;
       margin-block-start: 1.618rem;
+      text-transform: var(--heading-text-transform);
     }
 
     h1 {
