@@ -26,8 +26,8 @@
       --title-font-family: var(--font-family);
       --title-font-size: 1.272rem;
       --title-font-weight: var(--bold-font-weight);
-      --title-letter-spacing: normal;
-      --title-text-transform: none;
+      --title-letter-spacing: var(--heading-letter-spacing);
+      --title-text-transform: var(--heading-text-transform);
       --writing-mode: horizontal-tb;
     }
   }
