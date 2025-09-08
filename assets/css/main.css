@@ -3,33 +3,33 @@
 @layer {
   @layer tokens {
     :root {
-      --accent-color: auto;
-      --active-link-text-decoration-style: double;
-      --background-color: white;
-      --bold-font-weight: 600;
-      --code-font-family: monospace;
-      --color: black;
-      --font-family: sans-serif;
-      --font-size: 1rem;
-      --font-weight: 400;
-      --footer-font-family: var(--font-family);
-      --heading-font-weight: var(--bold-font-weight);
-      --heading-letter-spacing: normal;
-      --heading-line-height: 1.272;
-      --heading-text-transform: none;
-      --line-height: 1.618;
-      --link-color: var(--color);
-      --link-text-decoration-style: solid;
-      --link-text-underline-offset: 0.382em;
-      --max-inline-size: 30rem;
-      --nav-font-family: var(--font-family);
-      --title-color: var(--color);
-      --title-font-family: var(--font-family);
-      --title-font-size: 2.058rem;
-      --title-font-weight: var(--heading-font-weight);
-      --title-letter-spacing: var(--heading-letter-spacing);
-      --title-text-transform: var(--heading-text-transform);
-      --writing-mode: horizontal-tb;
+      --kaizen--accent-color: auto;
+      --kaizen--active-link-text-decoration-style: double;
+      --kaizen--background-color: white;
+      --kaizen--bold-font-weight: 600;
+      --kaizen--code-font-family: monospace;
+      --kaizen--color: black;
+      --kaizen--font-family: sans-serif;
+      --kaizen--font-size: 1rem;
+      --kaizen--font-weight: 400;
+      --kaizen--footer-font-family: var(--kaizen--font-family);
+      --kaizen--heading-font-weight: var(--kaizen--bold-font-weight);
+      --kaizen--heading-letter-spacing: normal;
+      --kaizen--heading-line-height: 1.272;
+      --kaizen--heading-text-transform: none;
+      --kaizen--line-height: 1.618;
+      --kaizen--link-color: var(--kaizen--color);
+      --kaizen--link-text-decoration-style: solid;
+      --kaizen--link-text-underline-offset: 0.382em;
+      --kaizen--max-inline-size: 30rem;
+      --kaizen--nav-font-family: var(--kaizen--font-family);
+      --kaizen--title-color: var(--kaizen--color);
+      --kaizen--title-font-family: var(--kaizen--font-family);
+      --kaizen--title-font-size: 2.058rem;
+      --kaizen--title-font-weight: var(--kaizen--heading-font-weight);
+      --kaizen--title-letter-spacing: var(--kaizen--heading-letter-spacing);
+      --kaizen--title-text-transform: var(--kaizen--heading-text-transform);
+      --kaizen--writing-mode: horizontal-tb;
     }
   }
 
@@ -39,52 +39,52 @@
     }
 
     :root {
-      accent-color: var(--accent-color);
-      font-family: var(--font-family);
-      font-size: var(--font-size);
-      writing-mode: var(--writing-mode);
+      accent-color: var(--kaizen--accent-color);
+      font-family: var(--kaizen--font-family);
+      font-size: var(--kaizen--font-size);
+      writing-mode: var(--kaizen--writing-mode);
     }
 
     body {
-      background-color: var(--background-color);
-      color: var(--color);
-      font-weight: var(--font-weight);
-      line-height: var(--line-height);
+      background-color: var(--kaizen--background-color);
+      color: var(--kaizen--color);
+      font-weight: var(--kaizen--font-weight);
+      line-height: var(--kaizen--line-height);
     }
   }
 
   @layer typography {
     body > footer {
-      font-family: var(--footer-font-family);
+      font-family: var(--kaizen--footer-font-family);
     }
 
     nav {
-      font-family: var(--nav-font-family);
+      font-family: var(--kaizen--nav-font-family);
     }
 
     a {
-      color: var(--link-color);
+      color: var(--kaizen--link-color);
       text-decoration: underline;
-      text-decoration-style: var(--link-text-decoration-style);
-      text-underline-offset: var(--link-text-underline-offset);
+      text-decoration-style: var(--kaizen--link-text-decoration-style);
+      text-underline-offset: var(--kaizen--link-text-underline-offset);
     }
 
     a.active {
-      text-decoration-style: var(--active-link-text-decoration-style);
+      text-decoration-style: var(--kaizen--active-link-text-decoration-style);
     }
 
     b, strong {
-      font-weight: var(--bold-font-weight);
+      font-weight: var(--kaizen--bold-font-weight);
     }
 
     h1, h2, h3, h4, h5, h6 {
-      font-weight: var(--heading-font-weight);
-      letter-spacing: var(--heading-letter-spacing);
-      line-height: var(--heading-line-height);
+      font-weight: var(--kaizen--heading-font-weight);
+      letter-spacing: var(--kaizen--heading-letter-spacing);
+      line-height: var(--kaizen--heading-line-height);
       margin: 0;
       margin-block-end: 1rem;
       margin-block-start: 1.618rem;
-      text-transform: var(--heading-text-transform);
+      text-transform: var(--kaizen--heading-text-transform);
     }
 
     h1 {
@@ -140,7 +140,7 @@
     }
 
     pre {
-      background-color: color-mix(in srgb, var(--color) 5.6%, transparent);
+      background-color: color-mix(in srgb, var(--kaizen--color) 5.6%, transparent);
       border-radius: 0.486rem;
       font-size: 0.786rem;
       margin: 0;
@@ -156,7 +156,7 @@
     }
 
     code {
-      font-family: var(--code-font-family);
+      font-family: var(--kaizen--code-font-family);
     }
 
     :not(pre) > code {
@@ -189,8 +189,8 @@
     }
 
     blockquote {
-      border-inline-start: 0.115rem solid color-mix(in srgb, var(--color) 11.5%, transparent);
-      color: color-mix(in srgb, var(--color) 78.6%, transparent);
+      border-inline-start: 0.115rem solid color-mix(in srgb, var(--kaizen--color) 11.5%, transparent);
+      color: color-mix(in srgb, var(--kaizen--color) 78.6%, transparent);
       margin: 0;
       margin-block: 1.618rem;
       padding: 0;
@@ -221,33 +221,33 @@
 
     caption {
       caption-side: block-end;
-      color: color-mix(in srgb, var(--color) 61.8%, transparent);
+      color: color-mix(in srgb, var(--kaizen--color) 61.8%, transparent);
       font-size: 0.786rem;
       padding-block-start: 0.486rem;
     }
 
     thead th {
-      background-color: color-mix(in srgb, var(--color) 14.6%, transparent);
+      background-color: color-mix(in srgb, var(--kaizen--color) 14.6%, transparent);
       text-align: start;
     }
 
     th, td {
-      border-block-end: 0.071rem solid color-mix(in srgb, var(--color) 18.6%, transparent);
+      border-block-end: 0.071rem solid color-mix(in srgb, var(--kaizen--color) 18.6%, transparent);
       padding-block: 0.486rem;
       padding-inline: 0.618rem;
       vertical-align: top;
     }
 
     th {
-      font-weight: var(--bold-font-weight);
+      font-weight: var(--kaizen--bold-font-weight);
     }
 
     tbody tr:nth-child(odd) {
-      background-color: color-mix(in srgb, var(--color) 5.6%, transparent);
+      background-color: color-mix(in srgb, var(--kaizen--color) 5.6%, transparent);
     }
 
     tbody tr:hover {
-      background-color: color-mix(in srgb, var(--color) 11.5%, transparent);
+      background-color: color-mix(in srgb, var(--kaizen--color) 11.5%, transparent);
     }
 
     th[scope=row] {
@@ -274,7 +274,7 @@
 
     body > * {
       inline-size: 100%;
-      max-inline-size: var(--max-inline-size);
+      max-inline-size: var(--kaizen--max-inline-size);
     }
 
     body > header {
@@ -354,18 +354,18 @@
     }
 
     .title {
-      color: var(--title-color);
-      font-family: var(--title-font-family);
-      font-size: var(--title-font-size);
-      font-weight: var(--title-font-weight);
+      color: var(--kaizen--title-color);
+      font-family: var(--kaizen--title-font-family);
+      font-size: var(--kaizen--title-font-size);
+      font-weight: var(--kaizen--title-font-weight);
       inline-size: 100%;
-      letter-spacing: var(--title-letter-spacing);
+      letter-spacing: var(--kaizen--title-letter-spacing);
       margin: 0;
-      text-transform: var(--title-text-transform);
+      text-transform: var(--kaizen--title-text-transform);
     }
 
     html:not(.home-kind) .title {
-      font-size: calc(var(--title-font-size) * 0.618);
+      font-size: calc(var(--kaizen--title-font-size) * 0.618);
     }
 
     .menu nav ul {
@@ -509,10 +509,10 @@
     #search-input {
       background-color: transparent;
       block-size: 2rem;
-      border: 0.056rem solid color-mix(in srgb, var(--color) 18.6%, transparent);
+      border: 0.056rem solid color-mix(in srgb, var(--kaizen--color) 18.6%, transparent);
       border-radius: 0.236rem;
-      box-shadow: var(--color) 0 0 0.09rem;
-      color: var(--color);
+      box-shadow: var(--kaizen--color) 0 0 0.09rem;
+      color: var(--kaizen--color);
       display: block;
       font-size: 1rem;
       inline-size: 100%;
@@ -526,13 +526,13 @@
     }
 
     #search-input:focus {
-      background-color: color-mix(in srgb, var(--color) 5.6%, transparent);
-      border-color: color-mix(in srgb, var(--color) 30%, transparent);
+      background-color: color-mix(in srgb, var(--kaizen--color) 5.6%, transparent);
+      border-color: color-mix(in srgb, var(--kaizen--color) 30%, transparent);
       outline: none;
     }
 
     #search-input::placeholder {
-      color: color-mix(in srgb, var(--color) 38.2%, transparent);
+      color: color-mix(in srgb, var(--kaizen--color) 38.2%, transparent);
     }
 
     #search-input::-webkit-search-cancel-button {
