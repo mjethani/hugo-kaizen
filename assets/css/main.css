@@ -13,6 +13,7 @@
       --font-size: 1rem;
       --font-weight: 400;
       --footer-font-family: var(--font-family);
+      --heading-font-weight: var(--bold-font-weight);
       --heading-letter-spacing: normal;
       --heading-line-height: 1.272;
       --heading-text-transform: none;
@@ -25,7 +26,7 @@
       --title-color: var(--color);
       --title-font-family: var(--font-family);
       --title-font-size: 1.272rem;
-      --title-font-weight: var(--bold-font-weight);
+      --title-font-weight: var(--heading-font-weight);
       --title-letter-spacing: var(--heading-letter-spacing);
       --title-text-transform: var(--heading-text-transform);
       --writing-mode: horizontal-tb;
@@ -77,7 +78,7 @@
     }
 
     h1, h2, h3, h4, h5, h6 {
-      font-weight: var(--bold-font-weight);
+      font-weight: var(--heading-font-weight);
       letter-spacing: var(--heading-letter-spacing);
       line-height: var(--heading-line-height);
       margin: 0;
