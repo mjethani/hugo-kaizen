@@ -37,8 +37,8 @@
 {{- with default "basic" site.Params.design }}
   {{- if reflect.IsSlice . }}
     {{- range . }}
-      {{- if .mediaPrelude }}
-      @media {{ .mediaPrelude }} {
+      {{- if .atMediaPrelude }}
+      @media {{ .atMediaPrelude }} {
 {{ partial (printf "designs/%s.css" .name) . }}
       }
       {{- else }}
