@@ -6,7 +6,7 @@
 {{ partialCached "designs/_components.css" . }}
 {{ partialCached "designs/_utilities.css" . }}
 
-{{- with site.Params.designs.basic }}
+{{- with . }}
 
 @layer colors {
   :root {
@@ -16,4 +16,4 @@
   }
 }
 
-{{- end }} {{- /* with site.Params.designs.basic */}}
+{{- end }} {{- /* with . */}}

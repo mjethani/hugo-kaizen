@@ -34,7 +34,14 @@
   }
 
   @layer design {
-{{- $design := site.Params.design | default "default" }}
-{{ partialCached (printf "designs/%s.css" $design) . }}
+{{- with default "default" site.Params.design }}
+  {{- if reflect.IsMap . }}
+    {{- range $key, $value := . }}
+{{ partialCached (printf "designs/%s.css" $key) $value }}
+    {{- end }}
+  {{- else }}
+{{ partialCached (printf "designs/%s.css" .) dict }}
+  {{- end }}
+{{- end }}
   }
 }
