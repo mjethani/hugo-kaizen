@@ -1,6 +1,6 @@
 /* Copyright (c) 2025 Manish Jethani */
 
-@layer base {
+@layer kaizen.framework.base {
   *, ::before, ::after {
     box-sizing: border-box;
   }

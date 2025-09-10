@@ -1,4 +1,17 @@
-{{- with resources.Get "_templates/main.css" | resources.ExecuteAsTemplate "css/main.css" $ }}
+{{- $defaultCSSFrameworkLayers := slice "tokens" "base" "typography" "layout" "components" "utilities" }}
+{{- range default $defaultCSSFrameworkLayers site.Params.cssFrameworkLayers }}
+  {{- with resources.Get (printf "css/framework/%s.css" .) }}
+    {{- with . | minify | fingerprint }}
+      {{- if site.Params.unsafeInlineCSS }}
+<style>{{ .Content | safeCSS }}</style>
+      {{- else }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- with resources.Get (printf "css/designs/%s.css" site.Params.design) }}
   {{- with . | minify | fingerprint }}
     {{- if site.Params.unsafeInlineCSS }}
 <style>{{ .Content | safeCSS }}</style>
