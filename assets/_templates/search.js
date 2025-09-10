@@ -69,7 +69,9 @@
 
   // Renders the given search results as HTML.
   function renderResultsHTML(query, results, resultsElement) {
-    let html = '<p>{{- i18n "results_for_query" -}}</p>';
+    let resultsForQueryText = {{- i18n "results_for_query" | htmlEscape | jsonify -}};
+
+    let html = `<p>${ resultsForQueryText }</p>`;
     html = html.replace('__QUERY__', `<span class="query">${ encodeHTML(query) }</span>`);
 
     html += '<ul>';
@@ -138,7 +140,8 @@
       lunrIndex = buildLunrIndex(index);
 
     } catch (error) {
-      searchResultsElement.innerHTML = `<p class="error">{{- i18n "search_index_load_error" -}}</p>`;
+      let searchIndexLoadErrorText = {{- i18n "search_index_load_error" | htmlEscape | jsonify -}};
+      searchResultsElement.innerHTML = `<p class="error">${ searchIndexLoadErrorText }</p>`;
 
       throw error;
     }
