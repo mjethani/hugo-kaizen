@@ -3,14 +3,14 @@
 'use strict';
 
 (function () {
-  // curl -OL https://unpkg.com/lunr/lunr.js && mv -v lunr.js lunr-SHA256-$(sha256 < lunr.js).js
-  let lunrHash = '9431726f05c0eae2a6e54dc197709422869f25cad44f2430d2fb7ddae80cc717';
-  let lunrIntegrity = 'sha256-' + btoa(String.fromCharCode(...new Uint8Array(lunrHash.match(/.{2}/g).map(b => parseInt(b, 16)))));
-  let lunrURL = `{{ "/js/lunr-SHA256-${ lunrHash }.js" | relURL }}`;
+  let { dataset } = document.currentScript;
 
-{{- with resources.Get "_templates/index.json" | resources.ExecuteAsTemplate (printf "js/index.%s.json" .Lang) $ | minify | fingerprint }}
-  let indexURL = '{{ .RelPermalink }}';
-{{- end }}
+  // curl -OL https://unpkg.com/lunr/lunr.js && mv -v lunr.js lunr-SHA256-$(sha256 < lunr.js).js
+  let lunrURL = dataset.lunrUrl;
+  let lunrHash = lunrURL.match(/\blunr-SHA256-([^.]*)\.js$/)[1];
+  let lunrIntegrity = 'sha256-' + btoa(String.fromCharCode(...new Uint8Array(lunrHash.match(/.{2}/g).map(b => parseInt(b, 16)))));
+
+  let indexURL = dataset.indexUrl;
 
   // Lookup table mapping permalinks to page objects.
   let indexLookup = new Map();
@@ -69,9 +69,7 @@
 
   // Renders the given search results as HTML.
   function renderResultsHTML(query, results, resultsElement) {
-    let resultsForQueryText = {{- i18n "results_for_query" | htmlEscape | jsonify -}};
-
-    let html = `<p>${ resultsForQueryText }</p>`;
+    let html = `<p>${ encodeHTML(dataset.i18nResultsForQuery) }</p>`;
     html = html.replace('__QUERY__', `<span class="query">${ encodeHTML(query) }</span>`);
 
     html += '<ul>';
@@ -140,8 +138,7 @@
       lunrIndex = buildLunrIndex(index);
 
     } catch (error) {
-      let searchIndexLoadErrorText = {{- i18n "search_index_load_error" | htmlEscape | jsonify -}};
-      searchResultsElement.innerHTML = `<p class="error">${ searchIndexLoadErrorText }</p>`;
+      searchResultsElement.innerHTML = `<p class="error">${ encodeHTML(dataset.i18nSearchIndexLoadError) }</p>`;
 
       throw error;
     }
