@@ -69,10 +69,10 @@
 
   // Renders the given search results as HTML.
   function renderResultsHTML(query, results, resultsElement) {
-    let html = `<p>${ encodeHTML(dataset.i18nResultsForQuery) }</p>`;
-    html = html.replace('__QUERY__', `<span class="query">${ encodeHTML(query) }</span>`);
+    let html = `<p id="search-results-label">${ encodeHTML(dataset.i18nResultsForQuery) }</p>`;
+    html = html.replace('__QUERY__', `<mark class="query">${ encodeHTML(query) }</mark>`);
 
-    html += '<ul>';
+    html += '<ul aria-labelledby="search-results-label">';
 
     // Show only the top few results.
     for (let { ref: permalink } of results.slice(0, 5)) {

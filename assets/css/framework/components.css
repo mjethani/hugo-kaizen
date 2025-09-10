@@ -204,6 +204,7 @@
   }
 
   #search-results .query {
+    background-color: transparent;
     font-weight: 600;
   }
 
