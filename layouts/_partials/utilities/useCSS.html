@@ -1,0 +1,22 @@
+{{- /*
+Renders a <link> or a <style> element for the given CSS resource.
+
+If site.Params.unsafeInlineCSS is true, the code is inlined with
+<style>...</style>; otherwise, a <link rel="stylesheet" href="..."> is used.
+
+@context {string} path The path to the resource.
+
+@example: {{ partial "useCSS.html" (dict "path" "css/styles.css") }}
+*/}}
+
+{{- with resources.Get .path }}
+  {{- with . | minify | fingerprint }}
+    {{- if site.Params.unsafeInlineCSS }}
+<style>{{ .Content | safeCSS }}</style>
+    {{- else }}
+<link rel="stylesheet" href="{{ .RelPermalink }}"
+    integrity="{{ .Data.Integrity }}"
+    crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}

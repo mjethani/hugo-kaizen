@@ -7,35 +7,20 @@
     "components"
     "utilities"
 }}
-{{-
-  range default $defaultCSSFrameworkLayers
-    site.Params.cssFrameworkLayers
-}}
+{{- range site.Params.cssFrameworkLayers | default $defaultCSSFrameworkLayers }}
 {{
-  partial "inline/head/css/use.html"
-    (printf "css/framework/%s.css" .)
+  partial "utilities/useCSS.html"
+    (dict "path" (printf "css/framework/%s.css" .))
 }}
 {{- end }}
 
 {{
-  partial "inline/head/css/use.html"
-    (printf "css/designs/%s.css" site.Params.design)
+  partial "utilities/useCSS.html"
+    (dict "path" (printf "css/designs/%s.css" site.Params.design))
 }}
 
 {{- if site.Params.useExternalSyntaxCSS }}
-{{ partial "inline/head/css/use.html" "css/syntax.css" }}
+{{ partial "utilities/useCSS.html" (dict "path" "css/syntax.css") }}
 {{- end }}
 
-{{ partial "inline/head/css/use.html" "css/extensions.css" }}
-
-{{- define "_partials/inline/head/css/use.html" }}
-  {{- with resources.Get . }}
-    {{- with . | minify | fingerprint }}
-      {{- if site.Params.unsafeInlineCSS }}
-<style>{{ .Content | safeCSS }}</style>
-      {{- else }}
-<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-      {{- end }}
-    {{- end }}
-  {{- end }}
-{{- end }}
+{{ partial "utilities/useCSS.html" (dict "path" "css/extensions.css") }}

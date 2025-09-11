@@ -1,0 +1,34 @@
+{{- /*
+Renders a <script> element for the given JavaScript resource.
+
+If site.Params.unsafeInlineJS is true, the code is inlined; otherwise, a
+<script src="..."> is used.
+
+@context {string} path The path to the resource.
+@context {dict} [dataset] An optional dictionary of key-value pairs to render
+  as data-* attributes.
+
+@example: {{ partial "useJS.html" (dict "path" "js/script.js" "dataset" (dict "page-kind" "home")) }}
+*/}}
+
+{{- with resources.Get .path }}
+  {{- with . | minify | fingerprint }}
+    {{- if site.Params.unsafeInlineJS }}
+<script
+      {{- range $k, $v := default dict $.dataset }}
+    {{ printf "data-%s" $k | safeHTMLAttr }}="{{ $v }}"
+      {{- end }}
+>{{ .Content | safeJS }}</script>
+    {{- else }}
+<script
+    src="{{ .RelPermalink }}"
+    integrity="{{ .Data.Integrity }}"
+    crossorigin="anonymous"
+    defer
+      {{- range $k, $v := default dict $.dataset }}
+    {{ printf "data-%s" $k | safeHTMLAttr }}="{{ $v }}"
+      {{- end }}
+></script>
+    {{- end }}
+  {{- end }}
+{{- end }}

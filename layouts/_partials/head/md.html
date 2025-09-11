@@ -7,6 +7,9 @@
     {{- end }}
     {{- $targetPath := printf "%s/%s.md" $dir $baseName }}
     {{- $resource := resources.FromString $targetPath . }}
-<script type="text/markdown" src="{{ $resource.RelPermalink }}" integrity="{{ ($resource | fingerprint).Data.Integrity }}" crossorigin="anonymous"></script>
+<script type="text/markdown" src="{{ $resource.RelPermalink }}"
+    integrity="{{ ($resource | fingerprint).Data.Integrity }}"
+    crossorigin="anonymous"
+></script>
   {{- end }}
 {{- end }}

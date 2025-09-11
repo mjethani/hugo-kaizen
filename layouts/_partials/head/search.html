@@ -1,29 +1,22 @@
 {{/* curl -OL https://unpkg.com/lunr/lunr.js && mv -v lunr.js lunr-SHA256-$(sha256 < lunr.js).js */}}
-{{- $lunrURL := "/js/lunr-SHA256-9431726f05c0eae2a6e54dc197709422869f25cad44f2430d2fb7ddae80cc717.js" | relURL }}
+{{- $lunrURL := "/js/lunr-SHA256-9431726f05c0eae2a6e54dc197709422869f25cad44f2430d2fb7ddae80cc717.js"
+      | relURL }}
 
-{{- $indexURL := "" }}
-{{- with resources.Get "_templates/index.json" | resources.ExecuteAsTemplate (printf "json/index.%s.json" .Lang) $ | minify | fingerprint }}
-  {{- $indexURL = .RelPermalink }}
-{{- end }}
+{{- $indexURL := (resources.Get "_templates/index.json"
+      | resources.ExecuteAsTemplate (printf "json/index.%s.json" .Lang) $
+      | minify
+      | fingerprint).RelPermalink }}
 
-{{- with resources.Get "js/search.js" | minify | fingerprint }}
-  {{- if site.Params.unsafeInlineJS }}
-<script
-  data-i18n-results-for-query="{{- i18n "results_for_query" -}}"
-  data-i18n-search-index-load-error="{{- i18n "search_index_load_error" -}}"
-  data-lunr-url="{{ $lunrURL }}"
-  data-index-url="{{ $indexURL }}"
->{{ .Content | safeJS }}</script>
-  {{- else }}
-<script
-  data-i18n-results-for-query="{{- i18n "results_for_query" -}}"
-  data-i18n-search-index-load-error="{{- i18n "search_index_load_error" -}}"
-  data-lunr-url="{{ $lunrURL }}"
-  data-index-url="{{ $indexURL }}"
-  src="{{ .RelPermalink }}"
-  integrity="{{ .Data.Integrity }}"
-  crossorigin="anonymous"
-  defer
-></script>
-  {{- end }}
-{{- end }}
+{{
+  partial "utilities/useJS.html"
+    (dict
+      "path" "js/search.js"
+      "dataset"
+        (dict
+          "lunr-url" $lunrURL
+          "index-url" $indexURL
+          "i18n-results-for-query" (i18n "results_for_query")
+          "i18n-search-index-load-error" (i18n "search_index_load_error")
+        )
+    )
+}}
