@@ -20,9 +20,16 @@
 
   // Encodes the given string to make it safe for HTML insertion.
   function encodeHTML(text) {
-    const div = document.createElement('div');
+    let div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+  }
+
+  // Makes interpolated values safe for HTML insertion.
+  function html(strings, ...values) {
+    return strings.reduce((a, e, i) =>
+      a + encodeHTML(String(values[i - 1])) + e
+    );
   }
 
   // Loads lunr.js and returns a promise that resolves when it's ready.
@@ -69,20 +76,20 @@
 
   // Renders the given search results as HTML.
   function renderResultsHTML(query, results, resultsElement) {
-    let html = `<p id="search-results-label">${ encodeHTML(dataset.i18nResultsForQuery) }</p>`;
-    html = html.replace('__QUERY__', `<mark class="query">${ encodeHTML(query) }</mark>`);
+    let source = html`<p id="search-results-label">${ dataset.i18nResultsForQuery }</p>`;
+    source = source.replace('__QUERY__', html`<mark class="query">${ query }</mark>`);
 
-    html += '<ul aria-labelledby="search-results-label">';
+    source += '<ul aria-labelledby="search-results-label">';
 
     // Show only the top few results.
     for (let { ref: permalink } of results.slice(0, 5)) {
       let entry = indexLookup.get(permalink);
-      html += `<li><a href="${ permalink }">${ encodeHTML(entry.title) }</a></li>`;
+      source += html`<li><a href="${ permalink }">${ entry.title }</a></li>`;
     }
 
-    html += '</ul>';
+    source += '</ul>';
 
-    resultsElement.innerHTML = html;
+    resultsElement.innerHTML = source;
   }
 
   // Updates the search results based on the given query.
@@ -138,7 +145,7 @@
       lunrIndex = buildLunrIndex(index);
 
     } catch (error) {
-      searchResultsElement.innerHTML = `<p class="error">${ encodeHTML(dataset.i18nSearchIndexLoadError) }</p>`;
+      searchResultsElement.innerHTML = html`<p class="error">${ dataset.i18nSearchIndexLoadError }</p>`;
 
       throw error;
     }
