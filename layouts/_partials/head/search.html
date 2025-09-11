@@ -2,7 +2,7 @@
 {{- $lunrURL := "/js/lunr-SHA256-9431726f05c0eae2a6e54dc197709422869f25cad44f2430d2fb7ddae80cc717.js" | relURL }}
 
 {{- $indexURL := "" }}
-{{- with resources.Get "_templates/index.json" | resources.ExecuteAsTemplate (printf "js/index.%s.json" .Lang) $ | minify | fingerprint }}
+{{- with resources.Get "_templates/index.json" | resources.ExecuteAsTemplate (printf "json/index.%s.json" .Lang) $ | minify | fingerprint }}
   {{- $indexURL = .RelPermalink }}
 {{- end }}
 
