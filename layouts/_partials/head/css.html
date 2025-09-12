@@ -14,10 +14,23 @@
 }}
 {{- end }}
 
+{{- $design := site.Params.design }}
+{{- if not (reflect.IsMap $design) }}
+  {{- $design = dict "name" $design }}
+{{- end }}
+{{- if $design.url }}
+<link rel="stylesheet" href="{{ $design.url }}"
+  {{- with $design.integrity }}
+    integrity="{{ . }}"
+  {{- end }}
+    crossorigin="anonymous"
+    >
+{{- else }}
 {{
   partial "utilities/useCSS.html"
-    (dict "path" (printf "css/designs/%s.css" site.Params.design))
+    (dict "path" (printf "css/designs/%s.css" $design.name))
 }}
+{{- end }}
 
 {{- if site.Params.useExternalSyntaxCSS }}
 {{ partial "utilities/useCSS.html" (dict "path" "css/syntax.css") }}
