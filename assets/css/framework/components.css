@@ -9,7 +9,7 @@
   }
 
   .powered-by a {
-    font-weight: 600;
+    font-weight: var(--kaizen--bold-font-weight);
   }
 
   .title {
@@ -204,8 +204,9 @@
   }
 
   #search-results .query {
+    color: var(--kaizen--color);
     background-color: transparent;
-    font-weight: 600;
+    font-weight: var(--kaizen--bold-font-weight);
   }
 
   #search-results ul {
