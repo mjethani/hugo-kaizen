@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" class="{{ .Kind }}-kind{{ if .Layout }} {{ .Layout }}-layout{{ end }}">
+<html
+    lang="{{ site.Language.LanguageCode }}"
+    dir="{{ or site.Language.LanguageDirection `ltr` }}"
+    class="{{ .Kind }}-kind{{ if .Layout }} {{ .Layout }}-layout{{ end }}"
+{{- if reflect.IsMap site.Params.design }}
+    data-design-hints="{{ site.Params.design.hints }}"
+{{- end }}
+    >
 <head>
 {{ partial "head.html" . }}
 </head>
