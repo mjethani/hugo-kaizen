@@ -2,9 +2,11 @@
   <section>
   {{- with site.GetPage "_404.md" }}
     <h2 class="section-title">{{ .Title }}</h2>
+    <div class="section-content">
 
 {{ .Content }}
 
+    </div>
   {{- end }}
   </section>
 {{- end }}

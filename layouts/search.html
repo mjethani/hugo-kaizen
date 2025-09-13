@@ -1,9 +1,11 @@
 {{- define "main" }}
   <section>
     <h2 class="section-title">{{ .Title }}</h2>
+    <div class="section-content">
 
 {{ .Content }}
 
+    </div>
     <noscript>
       <div class="no-js"><p class="error">{{- i18n "no_js_error" -}}</p></div>
     </noscript>

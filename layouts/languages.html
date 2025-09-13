@@ -1,9 +1,11 @@
 {{- define "main" }}
   <section>
     <h2 class="section-title">{{ .Title }}</h2>
+    <div class="section-content">
 
 {{ .Content }}
 
+    </div>
     <ul>
   {{- range site.Sites }}
       <li lang="{{ .Language.Lang }}"><a href="{{ .Home.Permalink }}" {{ if eq .Language.Lang $.Site.Language.Lang }}class="active"{{ end }}>{{ .Language.LanguageName | default .Language.Lang }}</a></li>
