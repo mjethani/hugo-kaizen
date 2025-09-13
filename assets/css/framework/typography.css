@@ -25,6 +25,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
+    font-family: var(--kaizen--heading-font-family);
     font-weight: var(--kaizen--heading-font-weight);
     letter-spacing: var(--kaizen--heading-letter-spacing);
     line-height: var(--kaizen--heading-line-height);

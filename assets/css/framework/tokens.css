@@ -12,6 +12,7 @@
     --kaizen--font-size: 1rem;
     --kaizen--font-weight: 400;
     --kaizen--footer-font-family: var(--kaizen--font-family);
+    --kaizen--heading-font-family: var(--kaizen--font-family);
     --kaizen--heading-font-weight: var(--kaizen--bold-font-weight);
     --kaizen--heading-letter-spacing: normal;
     --kaizen--heading-line-height: 1.272;
