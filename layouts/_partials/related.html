@@ -16,7 +16,7 @@ Renders a list of related pages.
 
 {{- with site.RegularPages.Related $page | first $limit }}
   <aside class="related">
-    <h3 class="section-title">{{- i18n "related" -}}</h3>
+    <h3 class="aside-title">{{- i18n "related" -}}</h3>
     <ul>
   {{- range . }}
       <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
