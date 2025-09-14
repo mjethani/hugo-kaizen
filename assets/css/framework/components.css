@@ -3,7 +3,7 @@
 @layer kaizen.framework.components {
   .copyright, .powered-by {
     font-size: 0.786rem;
-    font-weight: 300;
+    font-weight: var(--kaizen--light-font-weight);
     margin: 0;
     text-align: center;
   }
@@ -30,7 +30,7 @@
   .menu nav ul {
     display: flex;
     flex-wrap: wrap;
-    font-weight: 300;
+    font-weight: var(--kaizen--light-font-weight);
     font-size: 0.786rem;
     gap: 1.618rem;
     list-style: none;
@@ -68,13 +68,13 @@
   .article-date {
     display: block;
     font-size: 0.786rem;
-    font-weight: 300;
+    font-weight: var(--kaizen--light-font-weight);
     margin: 0;
   }
 
   .article-translations {
     font-size: 0.786rem;
-    font-weight: 300;
+    font-weight: var(--kaizen--light-font-weight);
   }
 
   .article-translations ul {
