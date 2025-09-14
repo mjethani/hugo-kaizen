@@ -19,7 +19,6 @@ titleCaseStyle = 'none'
     path = '../..'
 
 [params]
-  design = 'slate'
   includeMarkdownSource = true
 
   [params.author]
