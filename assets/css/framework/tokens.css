@@ -23,6 +23,7 @@
     --kaizen--link-text-decoration-style: solid;
     --kaizen--link-text-underline-offset: 0.382em;
     --kaizen--max-inline-size: 30rem;
+    --kaizen--medium-font-weight: 500;
     --kaizen--nav-font-family: var(--kaizen--font-family);
     --kaizen--title-color: var(--kaizen--color);
     --kaizen--title-font-family: var(--kaizen--font-family);

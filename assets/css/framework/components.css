@@ -61,7 +61,7 @@
 
   .article-title {
     font-size: 2.618rem;
-    font-weight: 500;
+    font-weight: var(--kaizen--medium-font-weight);
     margin: 0;
   }
 
