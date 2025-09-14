@@ -152,6 +152,10 @@
     content: '#';
   }
 
+  .aside-title {
+    margin-inline: var(--kaizen--bearing-adjust);
+  }
+
   .related {
     margin-block-start: 2.058rem;
   }
