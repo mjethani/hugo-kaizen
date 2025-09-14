@@ -59,10 +59,19 @@
     content: ' ⟫';
   }
 
+  .section-title {
+    margin-inline: var(--kaizen--bearing-adjust);
+  }
+
+  .section-content {
+    margin-inline: var(--kaizen--bearing-adjust);
+  }
+
   .article-title {
     font-size: 2.618rem;
     font-weight: var(--kaizen--medium-font-weight);
     margin: 0;
+    margin-inline: var(--kaizen--bearing-adjust);
   }
 
   .article-date {
@@ -70,6 +79,7 @@
     font-size: 0.786rem;
     font-weight: var(--kaizen--light-font-weight);
     margin: 0;
+    margin-inline: var(--kaizen--bearing-adjust);
   }
 
   .article-translations {
@@ -99,9 +109,10 @@
   }
 
   .article-content {
-    margin-trim: block;
     margin-block-start: 2.058rem;
     margin-block-end: 1.618rem;
+    margin-inline: var(--kaizen--bearing-adjust);
+    margin-trim: block;
   }
 
   @supports not (margin-trim: block) {
