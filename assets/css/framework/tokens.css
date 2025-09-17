@@ -24,6 +24,7 @@
     --kaizen--light-font-weight: 300;
     --kaizen--line-height: 1.618;
     --kaizen--link-color: var(--kaizen--color);
+    --kaizen--link-hover-color: var(--kaizen--link-color);
     --kaizen--link-text-decoration-style: solid;
     --kaizen--link-text-underline-offset: 0.382em;
     --kaizen--max-inline-size: 30rem;

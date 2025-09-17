@@ -16,6 +16,10 @@
     text-underline-offset: var(--kaizen--link-text-underline-offset);
   }
 
+  a:hover {
+    color: var(--kaizen--link-hover-color);
+  }
+
   a.active {
     text-decoration-style: var(--kaizen--active-link-text-decoration-style);
   }
