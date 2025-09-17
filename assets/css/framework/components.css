@@ -43,22 +43,6 @@
     padding: 0;
   }
 
-  .menu nav ul > li:has(> a[href^='/'])::before {
-    content: '⟨ ';
-  }
-
-  .menu nav ul > li:has(> a[href^='/'])::after {
-    content: ' ⟩';
-  }
-
-  .menu nav ul > li:not(:has(> a[href^='/']))::before {
-    content: '⟪ ';
-  }
-
-  .menu nav ul > li:not(:has(> a[href^='/']))::after {
-    content: ' ⟫';
-  }
-
   .section-title {
     margin-inline: var(--kaizen--bearing-adjust);
   }
