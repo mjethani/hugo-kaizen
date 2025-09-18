@@ -1,1 +1,20 @@
+{{- $design := site.Params.design }}
+{{- if not (reflect.IsMap $design) }}
+  {{- $design = dict "name" $design }}
+{{- end }}
+{{- if $design.jsURL }}
+<script src="{{ $design.jsURL }}"
+  {{- with $design.jsIntegrity }}
+    integrity="{{ . }}"
+  {{- end }}
+    crossorigin="anonymous"
+    defer
+></script>
+{{- else }}
+{{
+  partial "utilities/useJS.html"
+    (dict "path" (printf "js/designs/%s.js" $design.name))
+}}
+{{- end }}
+
 {{ partial "utilities/useJS.html" (dict "path" "js/extensions.js") }}

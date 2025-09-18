@@ -18,9 +18,9 @@
 {{- if not (reflect.IsMap $design) }}
   {{- $design = dict "name" $design }}
 {{- end }}
-{{- if $design.url }}
-<link rel="stylesheet" href="{{ $design.url }}"
-  {{- with $design.integrity }}
+{{- if $design.cssURL }}
+<link rel="stylesheet" href="{{ $design.cssURL }}"
+  {{- with $design.cssIntegrity }}
     integrity="{{ . }}"
   {{- end }}
     crossorigin="anonymous"
