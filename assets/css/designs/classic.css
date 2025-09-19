@@ -1,0 +1,57 @@
+/* Copyright (c) 2025 Manish Jethani */
+
+@import url('https://fonts.bunny.net/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=block');
+
+@layer kaizen.designs.classic {
+  @layer tokens {
+    :root {
+      --kaizen--code-font-family: 'Source Code Pro', monospace;
+      --kaizen--font-family: 'EB Garamond', serif;
+      --kaizen--font-size: 1.272rem;
+    }
+
+    /** system light mode **/
+    @media (prefers-color-scheme: light) {
+      :root {
+        --kaizen--background-color: oklch(98.16% 0.002 247.84);
+        --kaizen--color: oklch(20.38% 0.013 233.32);
+      }
+    }
+
+    /** system dark mode **/
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --kaizen--background-color: oklch(22.77% 0.006 285.93);
+        --kaizen--color: oklch(94.67% 0.003 286.35);
+      }
+    }
+
+    /** user light mode **/
+
+    :root[data-design-hints~='light'] {
+      --kaizen--background-color: oklch(98.16% 0.002 247.84);
+      --kaizen--color: oklch(20.38% 0.013 233.32);
+    }
+
+    /** user dark mode **/
+
+    :root[data-design-hints~='dark'] {
+      --kaizen--background-color: oklch(22.77% 0.006 285.93);
+      --kaizen--color: oklch(94.67% 0.003 286.35);
+    }
+  }
+
+  @layer base {
+    :root {
+      color-scheme: light dark;
+    }
+
+    :root[data-design-hints~='light'] {
+      color-scheme: light;
+    }
+
+    :root[data-design-hints~='dark'] {
+      color-scheme: dark;
+    }
+  }
+}
