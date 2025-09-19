@@ -1,0 +1,47 @@
+/* Copyright (c) 2025 Manish Jethani */
+
+@layer kaizen.designs.elegant {
+  @layer tokens {
+    :root {
+      --kaizen--code-font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', 'Courier New', monospace;
+      --kaizen--font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', 'Noto Serif', 'DejaVu Serif', serif;
+      --kaizen--heading-font-weight: 500;
+    }
+
+    :root {
+      --kaizen--background-color: oklch(99.11% 0 0);
+      --kaizen--color: oklch(20.46% 0 0);
+      --kaizen--link-color: oklch(54.27% 0.193 257.01);
+    }
+
+    :root {
+      --kaizen--title-font-size: 1.272rem;
+    }
+
+    /* Latin */
+    :root:lang(en), :root:lang(es), :root:lang(pt),
+    :root:lang(fr), :root:lang(de), :root:lang(id),
+    :root:lang(it), :root:lang(pl), :root:lang(nl),
+    :root:lang(ro), :root:lang(vi), :root:lang(tr),
+    :root:lang(sw), :root:lang(hu), :root:lang(cs),
+    :root:lang(sk), :root:lang(sr), :root:lang(hr),
+    :root:lang(fi), :root:lang(no), :root:lang(da),
+    :root:lang(sv), :root:lang(af), :root:lang(ms),
+    :root:lang(lb), :root:lang(et), :root:lang(sl),
+    :root:lang(is), :root:lang(mt), :root:lang(gd),
+    :root:lang(lt), :root:lang(ga), :root:lang(bs),
+    :root:lang(zu), :root:lang(xh), :root:lang(st),
+    :root:lang(nso), :root:lang(rw), :root:lang(tl),
+    :root:lang(ceb), :root:lang(jv), :root:lang(hmn),
+    :root:lang(mg), :root:lang(mn) {
+      --kaizen--title-letter-spacing: 0.115em;
+      --kaizen--title-text-transform: uppercase;
+    }
+  }
+
+  @layer components {
+    .title:first-letter {
+      font-size: 2.058em;
+    }
+  }
+}
