@@ -10,7 +10,7 @@
   {{- range sort (where site.Sections "Section" "in" site.MainSections) "Weight" }}
     <section>
       <h2 class="section-title">{{ .Title }}</h2>
-      <ul>
+      <ul class="section-list">
     {{- $pages := where .Site.RegularPages "Section" .Section }}
     {{- $sectionSize := or .Site.Params.homeSectionSize 3 }}
     {{- $topPages := first $sectionSize $pages }}

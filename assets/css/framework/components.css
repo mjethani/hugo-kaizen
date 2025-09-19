@@ -43,11 +43,7 @@
     padding: 0;
   }
 
-  .section-title {
-    margin-inline: var(--kaizen--bearing-adjust);
-  }
-
-  .section-content {
+  .section-title, .section-content, .section-list {
     margin-inline: var(--kaizen--bearing-adjust);
   }
 
@@ -136,7 +132,7 @@
     content: '#';
   }
 
-  .aside-title {
+  .aside-title, .aside-list {
     margin-inline: var(--kaizen--bearing-adjust);
   }
 
