@@ -34,41 +34,41 @@
     letter-spacing: var(--kaizen--heading-letter-spacing);
     line-height: var(--kaizen--heading-line-height);
     margin: 0;
-    margin-block-end: 1rem;
-    margin-block-start: 1.618rem;
+    margin-block-end: calc(1 * var(--kaizen--font-size));
+    margin-block-start: calc(1.618 * var(--kaizen--font-size));
     text-transform: var(--kaizen--heading-text-transform);
   }
 
   h1 {
-    font-size: 2.058rem;
+    font-size: calc(2.058 * var(--kaizen--font-size));
   }
 
   h2 {
-    font-size: 1.618rem;
+    font-size: calc(1.618 * var(--kaizen--font-size));
   }
 
   h3 {
-    font-size: 1.272rem;
+    font-size: calc(1.272 * var(--kaizen--font-size));
   }
 
   h4, h5, h6 {
-    font-size: 1rem;
+    font-size: calc(1 * var(--kaizen--font-size));
   }
 
   p {
     margin: 0;
-    margin-block-end: 1rem;
+    margin-block-end: calc(1 * var(--kaizen--font-size));
   }
 
   ul, ol {
     margin: 0;
-    margin-block-end: 1rem;
-    margin-inline-start: 1.618rem;
+    margin-block-end: calc(1 * var(--kaizen--font-size));
+    margin-inline-start: calc(1.618 * var(--kaizen--font-size));
     padding: 0;
   }
 
   li + li {
-    margin-block-start: 0.382rem;
+    margin-block-start: calc(0.382 * var(--kaizen--font-size));
   }
 
   main > section > ul,
@@ -93,12 +93,12 @@
 
   pre {
     background-color: var(--kaizen--pre-background-color);
-    border-radius: 0.486rem;
+    border-radius: calc(0.486 * var(--kaizen--font-size));
     color: var(--kaizen--pre-color);
-    font-size: 0.786rem;
+    font-size: calc(0.786 * var(--kaizen--font-size));
     margin: 0;
-    margin-block: 1.618rem;
-    padding: 0.618rem;
+    margin-block: calc(1.618 * var(--kaizen--font-size));
+    padding: calc(0.618 * var(--kaizen--font-size));
     white-space: pre-wrap;
     word-break: break-word;
   }
@@ -113,7 +113,7 @@
   }
 
   :not(pre) > code {
-    font-size: 0.786rem;
+    font-size: calc(0.786 * var(--kaizen--font-size));
   }
 
   img {
@@ -121,16 +121,16 @@
     block-size: auto;
     inline-size: auto;
     margin: 0;
-    margin-block: 1.618rem;
+    margin-block: calc(1.618 * var(--kaizen--font-size));
     max-inline-size: 100%;
   }
 
   figure {
     display: flex;
     flex-direction: column;
-    gap: 0.618rem;
+    gap: calc(0.618 * var(--kaizen--font-size));
     margin: 0;
-    margin-block: 1.618rem;
+    margin-block: calc(1.618 * var(--kaizen--font-size));
   }
 
   figure > * {
@@ -138,20 +138,20 @@
   }
 
   figure > figcaption {
-    font-size: 0.786rem;
+    font-size: calc(0.786 * var(--kaizen--font-size));
   }
 
   blockquote {
-    border-inline-start: 0.115rem solid color-mix(in srgb, var(--kaizen--color) 11.5%, transparent);
+    border-inline-start: calc(0.115 * var(--kaizen--font-size)) solid color-mix(in srgb, var(--kaizen--color) 11.5%, transparent);
     color: color-mix(in srgb, var(--kaizen--color) 78.6%, transparent);
     margin: 0;
-    margin-block: 1.618rem;
+    margin-block: calc(1.618 * var(--kaizen--font-size));
     padding: 0;
-    padding-inline-start: 1rem;
+    padding-inline-start: calc(1 * var(--kaizen--font-size));
   }
 
   blockquote > footer {
-    font-size: 0.786rem;
+    font-size: calc(0.786 * var(--kaizen--font-size));
   }
 
   blockquote > footer > cite:only-child {
@@ -161,7 +161,7 @@
 
   blockquote > footer > cite:only-child::before {
     content: '―';
-    margin-inline-end: 0.236rem;
+    margin-inline-end: calc(0.236 * var(--kaizen--font-size));
   }
 
   table {
@@ -169,14 +169,14 @@
     font-variant-numeric: tabular-nums;
     inline-size: 100%;
     margin: 0;
-    margin-block: 1.618rem;
+    margin-block: calc(1.618 * var(--kaizen--font-size));
   }
 
   caption {
     caption-side: block-end;
     color: color-mix(in srgb, var(--kaizen--color) 61.8%, transparent);
-    font-size: 0.786rem;
-    padding-block-start: 0.486rem;
+    font-size: calc(0.786 * var(--kaizen--font-size));
+    padding-block-start: calc(0.486 * var(--kaizen--font-size));
   }
 
   thead th {
@@ -185,9 +185,9 @@
   }
 
   th, td {
-    border-block-end: 0.071rem solid color-mix(in srgb, var(--kaizen--color) 18.6%, transparent);
-    padding-block: 0.486rem;
-    padding-inline: 0.618rem;
+    border-block-end: calc(0.071 * var(--kaizen--font-size)) solid color-mix(in srgb, var(--kaizen--color) 18.6%, transparent);
+    padding-block: calc(0.486 * var(--kaizen--font-size));
+    padding-inline: calc(0.618 * var(--kaizen--font-size));
     vertical-align: top;
   }
 
