@@ -27,14 +27,14 @@
     --kaizen--link-hover-color: var(--kaizen--link-color);
     --kaizen--link-text-decoration-style: solid;
     --kaizen--link-text-underline-offset: 0.382em;
-    --kaizen--max-inline-size: 30rem;
+    --kaizen--max-inline-size: calc(30 * var(--kaizen--font-size));
     --kaizen--medium-font-weight: 500;
     --kaizen--nav-font-family: var(--kaizen--font-family);
     --kaizen--pre-background-color: color-mix(in srgb, var(--kaizen--color) 5.6%, transparent);
     --kaizen--pre-color: var(--kaizen--color);
     --kaizen--title-color: var(--kaizen--color);
     --kaizen--title-font-family: var(--kaizen--heading-font-family);
-    --kaizen--title-font-size: 2.058rem;
+    --kaizen--title-font-size: calc(2.058 * var(--kaizen--font-size));
     --kaizen--title-font-weight: var(--kaizen--heading-font-weight);
     --kaizen--title-letter-spacing: var(--kaizen--heading-letter-spacing);
     --kaizen--title-text-transform: var(--kaizen--heading-text-transform);

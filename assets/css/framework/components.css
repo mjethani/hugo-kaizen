@@ -2,7 +2,7 @@
 
 @layer kaizen.framework.components {
   .copyright, .powered-by {
-    font-size: 0.786rem;
+    font-size: calc(0.786 * var(--kaizen--font-size));
     font-weight: var(--kaizen--light-font-weight);
     margin: 0;
     text-align: center;
@@ -31,8 +31,8 @@
     display: flex;
     flex-wrap: wrap;
     font-weight: var(--kaizen--light-font-weight);
-    font-size: 0.786rem;
-    gap: 1.618rem;
+    font-size: calc(0.786 * var(--kaizen--font-size));
+    gap: calc(1.618 * var(--kaizen--font-size));
     list-style: none;
     margin: 0;
     padding: 0;
@@ -48,7 +48,7 @@
   }
 
   .article-title {
-    font-size: 2.618rem;
+    font-size: calc(2.618 * var(--kaizen--font-size));
     font-weight: var(--kaizen--medium-font-weight);
     margin: 0;
     margin-inline: var(--kaizen--bearing-adjust);
@@ -56,21 +56,21 @@
 
   .article-date {
     display: block;
-    font-size: 0.786rem;
+    font-size: calc(0.786 * var(--kaizen--font-size));
     font-weight: var(--kaizen--light-font-weight);
     margin: 0;
     margin-inline: var(--kaizen--bearing-adjust);
   }
 
   .article-translations {
-    font-size: 0.786rem;
+    font-size: calc(0.786 * var(--kaizen--font-size));
     font-weight: var(--kaizen--light-font-weight);
   }
 
   .article-translations ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.618rem 1.618rem;
+    gap: calc(0.618 * var(--kaizen--font-size)) calc(1.618 * var(--kaizen--font-size));
     list-style: none;
     margin: 0;
     padding: 0;
@@ -90,8 +90,8 @@
 
   .article-content {
     font-size: var(--kaizen--font-size);
-    margin-block-start: 2.058rem;
-    margin-block-end: 1.618rem;
+    margin-block-start: calc(2.058 * var(--kaizen--font-size));
+    margin-block-end: calc(1.618 * var(--kaizen--font-size));
     margin-inline: var(--kaizen--bearing-adjust);
     margin-trim: block;
   }
@@ -117,7 +117,7 @@
   .article-tags ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.618rem 1rem;
+    gap: calc(0.618 * var(--kaizen--font-size)) calc(1 * var(--kaizen--font-size));
     list-style: none;
     margin: 0;
     padding: 0;
@@ -138,7 +138,7 @@
   }
 
   .related {
-    margin-block-start: 2.058rem;
+    margin-block-start: calc(2.058 * var(--kaizen--font-size));
   }
 
   .related > ul > li:dir(ltr) {
@@ -153,30 +153,30 @@
   }
 
   #search-icon {
-    block-size: 1rem;
-    inline-size: 1rem;
-    inset-block-start: 0.5rem;
-    inset-inline-start: 0.3rem;
+    block-size: calc(1 * var(--kaizen--font-size));
+    inline-size: calc(1 * var(--kaizen--font-size));
+    inset-block-start: calc(0.5 * var(--kaizen--font-size));
+    inset-inline-start: calc(0.3 * var(--kaizen--font-size));
     pointer-events: none;
     position: absolute;
   }
 
   #search-input {
     background-color: transparent;
-    block-size: 2rem;
-    border: 0.056rem solid color-mix(in srgb, var(--kaizen--color) 18.6%, transparent);
-    border-radius: 0.236rem;
-    box-shadow: var(--kaizen--color) 0 0 0.09rem;
+    block-size: calc(2 * var(--kaizen--font-size));
+    border: calc(0.056 * var(--kaizen--font-size)) solid color-mix(in srgb, var(--kaizen--color) 18.6%, transparent);
+    border-radius: calc(0.236 * var(--kaizen--font-size));
+    box-shadow: var(--kaizen--color) 0 0 calc(0.09 * var(--kaizen--font-size));
     color: var(--kaizen--color);
     display: block;
-    font-size: 1rem;
+    font-size: calc(1 * var(--kaizen--font-size));
     inline-size: 100%;
-    margin-block: 1.618rem;
+    margin-block: calc(1.618 * var(--kaizen--font-size));
     margin-inline: 0;
-    max-inline-size: 20rem;
-    padding-block: 0.186rem;
-    padding-inline-end: 0.3rem;
-    padding-inline-start: 1.6rem;
+    max-inline-size: calc(20 * var(--kaizen--font-size));
+    padding-block: calc(0.186 * var(--kaizen--font-size));
+    padding-inline-end: calc(0.3 * var(--kaizen--font-size));
+    padding-inline-start: calc(1.6 * var(--kaizen--font-size));
     transition: background-color 0.2s ease, border-color 0.2s ease;
   }
 
@@ -196,7 +196,7 @@
   }
 
   #search-results {
-    min-block-size: 20rem;
+    min-block-size: calc(20 * var(--kaizen--font-size));
   }
 
   #search-results .query {
