@@ -31,7 +31,7 @@
   }
 
   /* min-inline-size is not supported inside media queries yet. */
-  @media (min-width: calc(30 * var(--kaizen--font-size))) {
+  @media (min-width: 30rem) {
     body > footer {
       flex-direction: row;
     }
