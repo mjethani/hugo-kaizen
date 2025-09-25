@@ -5,6 +5,9 @@ mainSections = ['posts']
 summaryLength = 20
 titleCaseStyle = 'none'
 
+[build]
+  noJSConfigInAssets = true
+
 [languages]
   [languages.en]
     languageName = 'English'
@@ -20,6 +23,7 @@ titleCaseStyle = 'none'
 
 [params]
   includeMarkdownSource = true
+  useJSBuild = true
 
   [params.author]
     name = 'Manish Jethani'
