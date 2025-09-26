@@ -12,7 +12,18 @@ If site.Params.unsafeInlineJS is true, the code is inlined; otherwise, a
 */}}
 
 {{- with resources.Get .path }}
-  {{- with . | minify | fingerprint }}
+  {{- $resource := . }}
+  {{- if site.Params.useJSBuild }}
+    {{-
+      $buildOpts := dict
+        "minify" (not hugo.IsDevelopment)
+        "sourceMap" (cond hugo.IsDevelopment "inline" "")
+    }}
+    {{- $resource = $resource | js.Build $buildOpts }}
+  {{- else }}
+    {{- $resource = $resource | minify }}
+  {{- end }}
+  {{- with $resource | fingerprint }}
     {{- if site.Params.unsafeInlineJS }}
 <script
       {{- range $k, $v := default dict $.dataset }}
