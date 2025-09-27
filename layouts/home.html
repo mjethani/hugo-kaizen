@@ -1,11 +1,13 @@
 {{- define "main" }}
+  {{- with .Content }}
     <section>
       <div class="section-content">
 
-{{ .Content }}
+{{ . }}
 
       </div>
     </section>
+  {{- end }}
 
   {{- range sort (where site.Sections "Section" "in" site.MainSections) "Weight" }}
     <section>
